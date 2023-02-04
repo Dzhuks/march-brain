@@ -1,8 +1,8 @@
 import cv2
 import imutils
 import numpy as np
+from keras.models import load_model
 from matplotlib import pyplot as plt
-from tensorflow.keras.models import load_model
 
 MODEL_PATH = "cnn-parameters-improvement-23-0.91.model"
 best_model = load_model(filepath=MODEL_PATH)
