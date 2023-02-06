@@ -19,39 +19,25 @@ import sys
 
 import pyqtgraph as pg
 
-from evaluate import predict
+from evaluate import classify
+from detect import detect
 # IMPORT / GUI AND MODULES AND WIDGETS
 # ///////////////////////////////////////////////////////////////
 from modules import *
 from widgets import *
+from PyQt6.QtCore import QCoreApplication
 
 os.environ["QT_FONT_DPI"] = "96"  # FIX Problem for High DPI and Scale above 100%
 
-STAGES_FILE = "stages.txt"
+DESCRIPTIONS_FILE = "descriptions.txt"
+
+LABELS = ['Опухоль не обнаружена.', 'Обнаружена менингиома!', 'Обнаружена глиома!', 'Обнаружена аденома гипофиза!']
 
 
-def get_descr_stage(stage):
-    with open(STAGES_FILE, "r", encoding="utf-8") as f:
+def get_descr_type(diagnosis_num):
+    with open(DESCRIPTIONS_FILE, "r", encoding="utf-8") as f:
         lines = f.readlines()
-    return lines[stage]
-
-
-def gather_descr_stages():
-    with open(STAGES_FILE, "r", encoding="utf-8") as f:
-        lines = f.readlines()
-    return lines
-
-
-def get_stage(pred):
-    if pred < 50:
-        return 0
-    if 60 > pred >= 50:
-        return 1
-    if 70 > pred >= 60:
-        return 2
-    if 80 > pred >= 70:
-        return 3
-    return 4
+    return lines[diagnosis_num]
 
 
 # SET AS GLOBAL WIDGETS
@@ -101,13 +87,8 @@ class MainWindow(QMainWindow):
         # MAIN PAGE BUTTONS
         widgets.btn_load.clicked.connect(self.buttonClick)
         widgets.btn_evaluate.clicked.connect(self.buttonClick)
-        widgets.btn_compare.clicked.connect(self.buttonClick)
-        widgets.btn_reset.clicked.connect(self.buttonClick)
 
-        widgets.graphWidget.setBackground('w')
         self.stages = []
-        self.plot()
-
         # SHOW APP
         # ///////////////////////////////////////////////////////////////
         self.show()
@@ -161,23 +142,25 @@ class MainWindow(QMainWindow):
 
         if btnName == "btn_load":
             self.open_image()
-            widgets.label_stage.clear()
+            widgets.label_diagnosis.clear()
 
         if btnName == "btn_evaluate":
-            pred = predict(self.current_file)
-            stage = get_stage(pred)
-            widgets.label_stage.setText(get_descr_stage(stage))
+            # определение, есть ли опухоль в мозге
+            pred = detect(self.current_file)
+            if pred:
+                # если найдена опухоль, то нахождение ее вида
+                diagnosis_num = classify(self.current_file)
+                widgets.label_warning.setText("Настоятельная просьба посетить врача-онколога!")
+            else:
+                diagnosis_num = 0
 
-        if btnName == "btn_compare":
-            pred = predict(self.current_file)
-            stage = get_stage(pred)
-            self.stages.append(stage)
-            self.plot()
+            diagnosis = LABELS[diagnosis_num]
+            # получение описания болезни из файла и корректное отображение символов перевода строки и табуляций
+            description = get_descr_type(diagnosis_num).replace("\\n", "\n").replace("\\t", "\t")
 
-        if btnName == "btn_reset":
-            self.stages = []
-            widgets.graphWidget.clear()
-            self.plot()
+            widgets.label_diagnosis.setText(diagnosis)
+            widgets.label_description.setText(QCoreApplication.translate("MainWindow", u"{}".format(description), None))
+
 
         if btnName == "btn_save":
             print("Save BTN clicked!")
@@ -213,21 +196,6 @@ class MainWindow(QMainWindow):
                                                   options=options)
         if filename != "":
             self.set_image(filename)
-
-    def plot(self):
-        pen = pg.mkPen(color=(255, 0, 0))
-        widgets.graphWidget.plot(list(range(1, len(self.stages) + 1)), self.stages, pen=pen)
-
-        xticks = [[(v, str(v)) for v in range(1, len(self.stages) + 1)]]
-        if not self.stages:
-            xticks = [[(v, str(v)) for v in range(1, 4)]]
-        yticks = [[(v, str(v)) for v in range(5)]]
-
-        ax = widgets.graphWidget.getAxis('bottom')
-        ax.setTicks(xticks)
-
-        ay = widgets.graphWidget.getAxis("left")
-        ay.setTicks(yticks)
 
 
 if __name__ == "__main__":
