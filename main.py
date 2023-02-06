@@ -104,6 +104,8 @@ class MainWindow(QMainWindow):
         widgets.btn_compare.clicked.connect(self.buttonClick)
         widgets.btn_reset.clicked.connect(self.buttonClick)
 
+        widgets.graphWidget.setWindowTitle('Прогрессия')
+        widgets.graphWidget.setLabels(left="Степень", bottom="Номер теста")
         widgets.graphWidget.setBackground('w')
         self.stages = []
         self.plot()
@@ -216,18 +218,15 @@ class MainWindow(QMainWindow):
 
     def plot(self):
         pen = pg.mkPen(color=(255, 0, 0))
-        widgets.graphWidget.plot(list(range(1, len(self.stages) + 1)), self.stages, pen=pen)
+        widgets.graphWidget.plot(list(range(1, len(self.stages) + 1)), self.stages, symbol='o', pen=pen)
 
-        xticks = [[(v, str(v)) for v in range(1, len(self.stages) + 1)]]
+        xticks = [(v, str(v)) for v in range(1, len(self.stages) + 1)]
         if not self.stages:
-            xticks = [[(v, str(v)) for v in range(1, 4)]]
-        yticks = [[(v, str(v)) for v in range(5)]]
+            xticks = [(v, str(v)) for v in range(1, 4)]
 
         ax = widgets.graphWidget.getAxis('bottom')
-        ax.setTicks(xticks)
-
-        ay = widgets.graphWidget.getAxis("left")
-        ay.setTicks(yticks)
+        ax.setTicks([xticks, []])
+        widgets.graphWidget.setYRange(0, 5, padding=0)
 
 
 if __name__ == "__main__":
