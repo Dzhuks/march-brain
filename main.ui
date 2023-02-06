@@ -23,7 +23,6 @@
   <widget class="QWidget" name="styleSheet">
    <property name="font">
     <font>
-     <family>Segoe UI</family>
      <pointsize>10</pointsize>
      <italic>false</italic>
      <bold>false</bold>
@@ -675,7 +674,6 @@ Button */
              </property>
              <property name="font">
               <font>
-               <family>Segoe UI Semibold</family>
                <pointsize>12</pointsize>
                <italic>false</italic>
                <bold>false</bold>
@@ -705,7 +703,6 @@ Button */
              </property>
              <property name="font">
               <font>
-               <family>Segoe UI</family>
                <pointsize>8</pointsize>
                <italic>false</italic>
                <bold>false</bold>
@@ -790,7 +787,6 @@ Button */
                   </property>
                   <property name="font">
                    <font>
-                    <family>Segoe UI</family>
                     <pointsize>10</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -806,7 +802,7 @@ Button */
                    <string notr="true">background-image: url(:/icons/images/icons/icon_menu.png);</string>
                   </property>
                   <property name="text">
-                   <string>Hide</string>
+                   <string>Скрыть меню</string>
                   </property>
                  </widget>
                 </item>
@@ -853,7 +849,6 @@ Button */
                   </property>
                   <property name="font">
                    <font>
-                    <family>Segoe UI</family>
                     <pointsize>10</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -869,7 +864,7 @@ Button */
                    <string notr="true">background-image: url(:/icons/images/icons/cil-magnifying-glass.png);</string>
                   </property>
                   <property name="text">
-                   <string>Home</string>
+                   <string>Сканирование</string>
                   </property>
                  </widget>
                 </item>
@@ -889,7 +884,6 @@ Button */
                   </property>
                   <property name="font">
                    <font>
-                    <family>Segoe UI</family>
                     <pointsize>10</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -905,7 +899,7 @@ Button */
                    <string notr="true">background-image: url(:/icons/images/icons/cil-chart-pie.png);</string>
                   </property>
                   <property name="text">
-                   <string>Widgets</string>
+                   <string>Информация</string>
                   </property>
                  </widget>
                 </item>
@@ -925,7 +919,6 @@ Button */
                   </property>
                   <property name="font">
                    <font>
-                    <family>Segoe UI</family>
                     <pointsize>10</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -941,7 +934,7 @@ Button */
                    <string notr="true">background-image: url(:/icons/images/icons/cil-lightbulb.png);</string>
                   </property>
                   <property name="text">
-                   <string>New</string>
+                   <string>Руководство</string>
                   </property>
                  </widget>
                 </item>
@@ -1206,7 +1199,6 @@ Button */
                   </property>
                   <property name="font">
                    <font>
-                    <family>Segoe UI</family>
                     <pointsize>10</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -1242,7 +1234,6 @@ Button */
                   </property>
                   <property name="font">
                    <font>
-                    <family>Segoe UI</family>
                     <pointsize>10</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -1278,7 +1269,6 @@ Button */
                   </property>
                   <property name="font">
                    <font>
-                    <family>Segoe UI</family>
                     <pointsize>10</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -1468,7 +1458,6 @@ p, li { white-space: pre-wrap; }
                   </property>
                   <property name="font">
                    <font>
-                    <family>Segoe UI</family>
                     <pointsize>10</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -1566,7 +1555,6 @@ p, li { white-space: pre-wrap; }
                   </property>
                   <property name="font">
                    <font>
-                    <family>Segoe UI</family>
                     <pointsize>10</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -1740,12 +1728,23 @@ p, li { white-space: pre-wrap; }
                         <rect>
                          <x>220</x>
                          <y>430</y>
-                         <width>195</width>
-                         <height>81</height>
+                         <width>191</width>
+                         <height>131</height>
                         </rect>
                        </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>-1</pointsize>
+                         <italic>false</italic>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border-radius: 25px; background-image: url(:/images/images/images/detect_btn.png); font-size: 19px; font-weight: bold; background-color: #DBA03A;</string>
+                       </property>
                        <property name="text">
-                        <string>Обнаружить опухоль</string>
+                        <string>Обнаружить
+опухоль</string>
                        </property>
                       </widget>
                       <widget class="QPushButton" name="btn_load">
@@ -1754,60 +1753,85 @@ p, li { white-space: pre-wrap; }
                          <x>10</x>
                          <y>430</y>
                          <width>195</width>
-                         <height>81</height>
+                         <height>131</height>
                         </rect>
                        </property>
+                       <property name="styleSheet">
+                        <string notr="true">border-radius: 25px; background: url(:/images/images/images/load_btn.png);  font-size: 19px; font-weight: bold; background-color: #7dc68f;</string>
+                       </property>
                        <property name="text">
-                        <string>Загрузить МРТ изображение</string>
+                        <string>Загрузить
+снимок МРТ</string>
                        </property>
                       </widget>
-                      <widget class="QLabel" name="label_stage">
+                      <widget class="QLabel" name="label_diagnosis">
+                       <property name="geometry">
+                        <rect>
+                         <x>470</x>
+                         <y>-10</y>
+                         <width>641</width>
+                         <height>61</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>-1</pointsize>
+                         <italic>false</italic>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">font-weight: bold; font-size: 30px;</string>
+                       </property>
+                       <property name="text">
+                        <string>Выберите снимок и нажмите на кнопку</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="label_description">
                        <property name="geometry">
                         <rect>
                          <x>450</x>
                          <y>50</y>
                          <width>661</width>
-                         <height>21</height>
+                         <height>511</height>
                         </rect>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">font-size: 17px;</string>
+                       </property>
+                       <property name="lineWidth">
+                        <number>1</number>
                        </property>
                        <property name="text">
                         <string/>
                        </property>
-                      </widget>
-                      <widget class="PlotWidget" name="graphWidget" native="true">
-                       <property name="geometry">
-                        <rect>
-                         <x>440</x>
-                         <y>190</y>
-                         <width>671</width>
-                         <height>321</height>
-                        </rect>
+                       <property name="alignment">
+                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+                       </property>
+                       <property name="wordWrap">
+                        <bool>true</bool>
+                       </property>
+                       <property name="margin">
+                        <number>0</number>
                        </property>
                       </widget>
-                      <widget class="QPushButton" name="btn_reset">
+                      <widget class="QLabel" name="label_warning">
                        <property name="geometry">
                         <rect>
-                         <x>770</x>
-                         <y>520</y>
-                         <width>341</width>
-                         <height>71</height>
+                         <x>450</x>
+                         <y>560</y>
+                         <width>711</width>
+                         <height>31</height>
                         </rect>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">font-size: 26px; color: #FF0032; font-weight: bold</string>
                        </property>
                        <property name="text">
-                        <string>Обнулить данные</string>
-                       </property>
-                      </widget>
-                      <widget class="QPushButton" name="btn_compare">
-                       <property name="geometry">
-                        <rect>
-                         <x>10</x>
-                         <y>520</y>
-                         <width>400</width>
-                         <height>71</height>
-                        </rect>
-                       </property>
-                       <property name="text">
-                        <string>Сравнить результаты</string>
+                        <string/>
                        </property>
                       </widget>
                      </widget>
@@ -1968,7 +1992,6 @@ p, li { white-space: pre-wrap; }
                            </property>
                            <property name="font">
                             <font>
-                             <family>Segoe UI</family>
                              <pointsize>10</pointsize>
                              <italic>false</italic>
                              <bold>false</bold>
@@ -2004,7 +2027,6 @@ p, li { white-space: pre-wrap; }
                            </property>
                            <property name="font">
                             <font>
-                             <family>Segoe UI</family>
                              <pointsize>10</pointsize>
                              <italic>false</italic>
                              <bold>false</bold>
@@ -2040,7 +2062,6 @@ p, li { white-space: pre-wrap; }
                            </property>
                            <property name="font">
                             <font>
-                             <family>Segoe UI</family>
                              <pointsize>10</pointsize>
                              <italic>false</italic>
                              <bold>false</bold>
@@ -2118,7 +2139,6 @@ p, li { white-space: pre-wrap; }
                   </property>
                   <property name="font">
                    <font>
-                    <family>Segoe UI</family>
                     <pointsize>-1</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -2179,14 +2199,6 @@ p, li { white-space: pre-wrap; }
    </layout>
   </widget>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>PlotWidget</class>
-   <extends>QWidget</extends>
-   <header>pyqtgraph</header>
-   <container>1</container>
-  </customwidget>
- </customwidgets>
  <resources>
   <include location="resources.qrc"/>
  </resources>
