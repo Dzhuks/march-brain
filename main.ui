@@ -1748,19 +1748,6 @@ p, li { white-space: pre-wrap; }
                         <string>Обнаружить опухоль</string>
                        </property>
                       </widget>
-                      <widget class="QPushButton" name="btn_compare">
-                       <property name="geometry">
-                        <rect>
-                         <x>10</x>
-                         <y>520</y>
-                         <width>400</width>
-                         <height>81</height>
-                        </rect>
-                       </property>
-                       <property name="text">
-                        <string>Сравнить картинки</string>
-                       </property>
-                      </widget>
                       <widget class="QPushButton" name="btn_load">
                        <property name="geometry">
                         <rect>
@@ -1785,6 +1772,42 @@ p, li { white-space: pre-wrap; }
                        </property>
                        <property name="text">
                         <string/>
+                       </property>
+                      </widget>
+                      <widget class="PlotWidget" name="graphWidget" native="true">
+                       <property name="geometry">
+                        <rect>
+                         <x>440</x>
+                         <y>190</y>
+                         <width>671</width>
+                         <height>321</height>
+                        </rect>
+                       </property>
+                      </widget>
+                      <widget class="QPushButton" name="btn_reset">
+                       <property name="geometry">
+                        <rect>
+                         <x>770</x>
+                         <y>520</y>
+                         <width>341</width>
+                         <height>71</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string>Обнулить данные</string>
+                       </property>
+                      </widget>
+                      <widget class="QPushButton" name="btn_compare">
+                       <property name="geometry">
+                        <rect>
+                         <x>10</x>
+                         <y>520</y>
+                         <width>400</width>
+                         <height>71</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string>Сравнить результаты</string>
                        </property>
                       </widget>
                      </widget>
@@ -2156,6 +2179,14 @@ p, li { white-space: pre-wrap; }
    </layout>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PlotWidget</class>
+   <extends>QWidget</extends>
+   <header>pyqtgraph</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="resources.qrc"/>
  </resources>

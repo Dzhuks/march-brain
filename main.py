@@ -17,6 +17,8 @@
 import os
 import sys
 
+import pyqtgraph as pg
+
 from evaluate import predict
 # IMPORT / GUI AND MODULES AND WIDGETS
 # ///////////////////////////////////////////////////////////////
@@ -25,22 +27,37 @@ from widgets import *
 
 os.environ["QT_FONT_DPI"] = "96"  # FIX Problem for High DPI and Scale above 100%
 
-STAGES_FILE = "stages.txt" 
+STAGES_FILE = "stages.txt"
 
-def get_stage(stage):
+
+def get_descr_stage(stage):
     with open(STAGES_FILE, "r", encoding="utf-8") as f:
         lines = f.readlines()
     return lines[stage]
 
 
-def gather_stages():
+def gather_descr_stages():
     with open(STAGES_FILE, "r", encoding="utf-8") as f:
         lines = f.readlines()
     return lines
 
+
+def get_stage(pred):
+    if pred < 50:
+        return 0
+    if 60 > pred >= 50:
+        return 1
+    if 70 > pred >= 60:
+        return 2
+    if 80 > pred >= 70:
+        return 3
+    return 4
+
+
 # SET AS GLOBAL WIDGETS
 # ///////////////////////////////////////////////////////////////
 widgets = None
+
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -73,10 +90,6 @@ class MainWindow(QMainWindow):
         # ///////////////////////////////////////////////////////////////
         UIFunctions.uiDefinitions(self)
 
-        # QTableWidget PARAMETERS
-        # ///////////////////////////////////////////////////////////////
-        #widgets.tableWidget.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
-
         # BUTTONS CLICK
         # ///////////////////////////////////////////////////////////////
 
@@ -88,6 +101,12 @@ class MainWindow(QMainWindow):
         # MAIN PAGE BUTTONS
         widgets.btn_load.clicked.connect(self.buttonClick)
         widgets.btn_evaluate.clicked.connect(self.buttonClick)
+        widgets.btn_compare.clicked.connect(self.buttonClick)
+        widgets.btn_reset.clicked.connect(self.buttonClick)
+
+        widgets.graphWidget.setBackground('w')
+        self.stages = []
+        self.plot()
 
         # SHOW APP
         # ///////////////////////////////////////////////////////////////
@@ -96,7 +115,7 @@ class MainWindow(QMainWindow):
         # SET CUSTOM THEME
         # ///////////////////////////////////////////////////////////////
         useCustomTheme = False
-        themeFile = "themes\py_dracula_light.qss"
+        themeFile = r"themes\py_dracula_light.qss"
 
         # SET THEME AND HACKS
         if useCustomTheme:
@@ -113,7 +132,6 @@ class MainWindow(QMainWindow):
 
         self.img_width = self.img_height = 400
         self.set_image(r"images\images\default.png")
-
 
     # BUTTONS CLICK
     # Post here your functions for clicked buttons
@@ -137,9 +155,9 @@ class MainWindow(QMainWindow):
 
         # SHOW instructions PAGE
         if btnName == "btn_instructions":
-            widgets.stackedWidget.setCurrentWidget(widgets.instructions) # SET PAGE
-            UIFunctions.resetStyle(self, btnName) # RESET ANOTHERS BUTTONS SELECTED
-            btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet())) # SELECT MENU
+            widgets.stackedWidget.setCurrentWidget(widgets.instructions)  # SET PAGE
+            UIFunctions.resetStyle(self, btnName)  # RESET ANOTHERS BUTTONS SELECTED
+            btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))  # SELECT MENU
 
         if btnName == "btn_load":
             self.open_image()
@@ -147,19 +165,19 @@ class MainWindow(QMainWindow):
 
         if btnName == "btn_evaluate":
             pred = predict(self.current_file)
-            if pred < 50:
-                widgets.label_stage.setText(get_stage(0))
-            elif 60 > pred >= 50:
-                widgets.label_stage.setText(get_stage(1))
-            elif 70 > pred >= 60:
-                widgets.label_stage.setText(get_stage(2))
-            elif 80 > pred >= 70:
-                widgets.label_stage.setText(get_stage(3))
-            else:
-                widgets.label_stage.setText(get_stage(4))
+            stage = get_stage(pred)
+            widgets.label_stage.setText(get_descr_stage(stage))
 
         if btnName == "btn_compare":
-            pass
+            pred = predict(self.current_file)
+            stage = get_stage(pred)
+            self.stages.append(stage)
+            self.plot()
+
+        if btnName == "btn_reset":
+            self.stages = []
+            widgets.graphWidget.clear()
+            self.plot()
 
         if btnName == "btn_save":
             print("Save BTN clicked!")
@@ -192,9 +210,24 @@ class MainWindow(QMainWindow):
     def open_image(self):
         options = QFileDialog.Options()
         filename, _ = QFileDialog.getOpenFileName(self, "Открыть файл", "", "Виды изображение (*.png, *.jpg)",
-                                                    options=options)
+                                                  options=options)
         if filename != "":
             self.set_image(filename)
+
+    def plot(self):
+        pen = pg.mkPen(color=(255, 0, 0))
+        widgets.graphWidget.plot(list(range(1, len(self.stages) + 1)), self.stages, pen=pen)
+
+        xticks = [[(v, str(v)) for v in range(1, len(self.stages) + 1)]]
+        if not self.stages:
+            xticks = [[(v, str(v)) for v in range(1, 4)]]
+        yticks = [[(v, str(v)) for v in range(5)]]
+
+        ax = widgets.graphWidget.getAxis('bottom')
+        ax.setTicks(xticks)
+
+        ay = widgets.graphWidget.getAxis("left")
+        ay.setTicks(yticks)
 
 
 if __name__ == "__main__":
