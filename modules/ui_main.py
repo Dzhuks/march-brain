@@ -1,20 +1,18 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainEAOkKE.ui'
+## Form generated from reading UI file 'mainuJDyJc.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.0.2
+## Created by: Qt User Interface Compiler version 6.1.0
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from pyqtgraph import PlotWidget
 from PySide6.QtCore import *
 from PySide6.QtGui import *
 from PySide6.QtWidgets import *
 
-from modules import resources_rc
-
+from . resources_rc import *
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -25,7 +23,6 @@ class Ui_MainWindow(object):
         self.styleSheet = QWidget(MainWindow)
         self.styleSheet.setObjectName(u"styleSheet")
         font = QFont()
-        font.setFamily(u"Segoe UI")
         font.setPointSize(10)
         font.setBold(False)
         font.setItalic(False)
@@ -590,7 +587,6 @@ class Ui_MainWindow(object):
         self.titleLeftApp.setObjectName(u"titleLeftApp")
         self.titleLeftApp.setGeometry(QRect(70, 8, 160, 20))
         font1 = QFont()
-        font1.setFamily(u"Segoe UI Semibold")
         font1.setPointSize(12)
         font1.setBold(False)
         font1.setItalic(False)
@@ -601,7 +597,6 @@ class Ui_MainWindow(object):
         self.titleLeftDescription.setGeometry(QRect(70, 27, 160, 16))
         self.titleLeftDescription.setMaximumSize(QSize(16777215, 16))
         font2 = QFont()
-        font2.setFamily(u"Segoe UI")
         font2.setPointSize(8)
         font2.setBold(False)
         font2.setItalic(False)
@@ -926,7 +921,6 @@ class Ui_MainWindow(object):
         self.maximizeRestoreAppBtn.setMinimumSize(QSize(28, 28))
         self.maximizeRestoreAppBtn.setMaximumSize(QSize(28, 28))
         font3 = QFont()
-        font3.setFamily(u"Segoe UI")
         font3.setPointSize(10)
         font3.setBold(False)
         font3.setItalic(False)
@@ -992,22 +986,34 @@ class Ui_MainWindow(object):
         self.img_brain.setGeometry(QRect(10, 10, 400, 400))
         self.btn_evaluate = QPushButton(self.detection)
         self.btn_evaluate.setObjectName(u"btn_evaluate")
-        self.btn_evaluate.setGeometry(QRect(220, 430, 195, 81))
+        self.btn_evaluate.setGeometry(QRect(220, 430, 191, 131))
+        font4 = QFont()
+        font4.setBold(True)
+        font4.setItalic(False)
+        self.btn_evaluate.setFont(font4)
+        self.btn_evaluate.setStyleSheet(u"border-radius: 25px; background-image: url(:/images/images/images/detect_btn.png); font-size: 19px; font-weight: bold; background-color: #DBA03A;")
         self.btn_load = QPushButton(self.detection)
         self.btn_load.setObjectName(u"btn_load")
-        self.btn_load.setGeometry(QRect(10, 430, 195, 81))
-        self.label_stage = QLabel(self.detection)
-        self.label_stage.setObjectName(u"label_stage")
-        self.label_stage.setGeometry(QRect(450, 50, 661, 21))
-        self.graphWidget = PlotWidget(self.detection)
-        self.graphWidget.setObjectName(u"graphWidget")
-        self.graphWidget.setGeometry(QRect(440, 190, 671, 321))
-        self.btn_reset = QPushButton(self.detection)
-        self.btn_reset.setObjectName(u"btn_reset")
-        self.btn_reset.setGeometry(QRect(770, 520, 341, 71))
-        self.btn_compare = QPushButton(self.detection)
-        self.btn_compare.setObjectName(u"btn_compare")
-        self.btn_compare.setGeometry(QRect(10, 520, 400, 71))
+        self.btn_load.setGeometry(QRect(10, 430, 195, 131))
+        self.btn_load.setStyleSheet(u"border-radius: 25px; background: url(:/images/images/images/load_btn.png);  font-size: 19px; font-weight: bold; background-color: #7dc68f;")
+        self.label_diagnosis = QLabel(self.detection)
+        self.label_diagnosis.setObjectName(u"label_diagnosis")
+        self.label_diagnosis.setGeometry(QRect(470, -10, 641, 61))
+        self.label_diagnosis.setFont(font4)
+        self.label_diagnosis.setStyleSheet(u"font-weight: bold; font-size: 30px;")
+        self.label_diagnosis.setAlignment(Qt.AlignCenter)
+        self.label_description = QLabel(self.detection)
+        self.label_description.setObjectName(u"label_description")
+        self.label_description.setGeometry(QRect(450, 50, 661, 511))
+        self.label_description.setStyleSheet(u"font-size: 17px;")
+        self.label_description.setLineWidth(1)
+        self.label_description.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
+        self.label_description.setWordWrap(True)
+        self.label_description.setMargin(0)
+        self.label_warning = QLabel(self.detection)
+        self.label_warning.setObjectName(u"label_warning")
+        self.label_warning.setGeometry(QRect(450, 560, 711, 31))
+        self.label_warning.setStyleSheet(u"font-size: 26px; color: #FF0032; font-weight: bold")
         self.stackedWidget.addWidget(self.detection)
         self.about_cancer = QWidget()
         self.about_cancer.setObjectName(u"about_cancer")
@@ -1129,11 +1135,10 @@ class Ui_MainWindow(object):
         self.creditsLabel = QLabel(self.bottomBar)
         self.creditsLabel.setObjectName(u"creditsLabel")
         self.creditsLabel.setMaximumSize(QSize(16777215, 16))
-        font4 = QFont()
-        font4.setFamily(u"Segoe UI")
-        font4.setBold(False)
-        font4.setItalic(False)
-        self.creditsLabel.setFont(font4)
+        font5 = QFont()
+        font5.setBold(False)
+        font5.setItalic(False)
+        self.creditsLabel.setFont(font5)
         self.creditsLabel.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
 
         self.horizontalLayout_5.addWidget(self.creditsLabel)
@@ -1179,10 +1184,10 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
         self.titleLeftApp.setText(QCoreApplication.translate("MainWindow", u"Nazvanie", None))
         self.titleLeftDescription.setText(QCoreApplication.translate("MainWindow", u"Brain Tumor detector", None))
-        self.toggleButton.setText(QCoreApplication.translate("MainWindow", u"Hide", None))
-        self.btn_detection.setText(QCoreApplication.translate("MainWindow", u"Home", None))
-        self.btn_about_cancer.setText(QCoreApplication.translate("MainWindow", u"Widgets", None))
-        self.btn_instructions.setText(QCoreApplication.translate("MainWindow", u"New", None))
+        self.toggleButton.setText(QCoreApplication.translate("MainWindow", u"\u0421\u043a\u0440\u044b\u0442\u044c \u043c\u0435\u043d\u044e", None))
+        self.btn_detection.setText(QCoreApplication.translate("MainWindow", u"\u0421\u043a\u0430\u043d\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435", None))
+        self.btn_about_cancer.setText(QCoreApplication.translate("MainWindow", u"\u0418\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044f", None))
+        self.btn_instructions.setText(QCoreApplication.translate("MainWindow", u"\u0420\u0443\u043a\u043e\u0432\u043e\u0434\u0441\u0442\u0432\u043e", None))
         self.extraLabel.setText(QCoreApplication.translate("MainWindow", u"Left Box", None))
 #if QT_CONFIG(tooltip)
         self.extraCloseColumnBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Close left box", None))
@@ -1219,11 +1224,13 @@ class Ui_MainWindow(object):
 #endif // QT_CONFIG(tooltip)
         self.closeAppBtn.setText("")
         self.img_brain.setText("")
-        self.btn_evaluate.setText(QCoreApplication.translate("MainWindow", u"\u041e\u0431\u043d\u0430\u0440\u0443\u0436\u0438\u0442\u044c \u043e\u043f\u0443\u0445\u043e\u043b\u044c", None))
-        self.btn_load.setText(QCoreApplication.translate("MainWindow", u"\u0417\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u044c \u041c\u0420\u0422 \u0438\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0435", None))
-        self.label_stage.setText("")
-        self.btn_reset.setText(QCoreApplication.translate("MainWindow", u"\u041e\u0431\u043d\u0443\u043b\u0438\u0442\u044c \u0434\u0430\u043d\u043d\u044b\u0435", None))
-        self.btn_compare.setText(QCoreApplication.translate("MainWindow", u"\u0421\u0440\u0430\u0432\u043d\u0438\u0442\u044c \u0440\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442\u044b", None))
+        self.btn_evaluate.setText(QCoreApplication.translate("MainWindow", u"\u041e\u0431\u043d\u0430\u0440\u0443\u0436\u0438\u0442\u044c\n"
+"\u043e\u043f\u0443\u0445\u043e\u043b\u044c", None))
+        self.btn_load.setText(QCoreApplication.translate("MainWindow", u"\u0417\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u044c\n"
+"\u0441\u043d\u0438\u043c\u043e\u043a \u041c\u0420\u0422", None))
+        self.label_diagnosis.setText(QCoreApplication.translate("MainWindow", u"\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0441\u043d\u0438\u043c\u043e\u043a \u0438 \u043d\u0430\u0436\u043c\u0438\u0442\u0435 \u043d\u0430 \u043a\u043d\u043e\u043f\u043a\u0443", None))
+        self.label_description.setText("")
+        self.label_warning.setText("")
         self.label.setText(QCoreApplication.translate("MainWindow", u"NEW PAGE TEST", None))
         self.btn_message.setText(QCoreApplication.translate("MainWindow", u"Message", None))
         self.btn_print.setText(QCoreApplication.translate("MainWindow", u"Print", None))
