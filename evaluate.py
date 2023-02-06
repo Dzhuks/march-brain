@@ -75,4 +75,4 @@ def predict(filepath):
     img = img / 255.  # normalize values
 
     imgs = np.array([img])
-    return best_model.predict(imgs)
+    return round(best_model.predict(imgs)[0][0], 2) * 100

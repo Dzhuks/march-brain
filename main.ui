@@ -1774,6 +1774,19 @@ p, li { white-space: pre-wrap; }
                         <string>Загрузить МРТ изображение</string>
                        </property>
                       </widget>
+                      <widget class="QLabel" name="label_stage">
+                       <property name="geometry">
+                        <rect>
+                         <x>450</x>
+                         <y>50</y>
+                         <width>661</width>
+                         <height>21</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
                      </widget>
                      <widget class="QWidget" name="about_cancer">
                       <property name="styleSheet">

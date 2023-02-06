@@ -15,15 +15,28 @@
 # ///////////////////////////////////////////////////////////////
 
 import os
-import platform
 import sys
 
+from evaluate import predict
 # IMPORT / GUI AND MODULES AND WIDGETS
 # ///////////////////////////////////////////////////////////////
 from modules import *
 from widgets import *
 
-os.environ["QT_FONT_DPI"] = "96" # FIX Problem for High DPI and Scale above 100%
+os.environ["QT_FONT_DPI"] = "96"  # FIX Problem for High DPI and Scale above 100%
+
+STAGES_FILE = "stages.txt" 
+
+def get_stage(stage):
+    with open(STAGES_FILE, "r", encoding="utf-8") as f:
+        lines = f.readlines()
+    return lines[stage]
+
+
+def gather_stages():
+    with open(STAGES_FILE, "r", encoding="utf-8") as f:
+        lines = f.readlines()
+    return lines
 
 # SET AS GLOBAL WIDGETS
 # ///////////////////////////////////////////////////////////////
@@ -74,6 +87,7 @@ class MainWindow(QMainWindow):
 
         # MAIN PAGE BUTTONS
         widgets.btn_load.clicked.connect(self.buttonClick)
+        widgets.btn_evaluate.clicked.connect(self.buttonClick)
 
         # SHOW APP
         # ///////////////////////////////////////////////////////////////
@@ -129,9 +143,20 @@ class MainWindow(QMainWindow):
 
         if btnName == "btn_load":
             self.open_image()
+            widgets.label_stage.clear()
 
         if btnName == "btn_evaluate":
-            pass
+            pred = predict(self.current_file)
+            if pred < 50:
+                widgets.label_stage.setText(get_stage(0))
+            elif 60 > pred >= 50:
+                widgets.label_stage.setText(get_stage(1))
+            elif 70 > pred >= 60:
+                widgets.label_stage.setText(get_stage(2))
+            elif 80 > pred >= 70:
+                widgets.label_stage.setText(get_stage(3))
+            else:
+                widgets.label_stage.setText(get_stage(4))
 
         if btnName == "btn_compare":
             pass
