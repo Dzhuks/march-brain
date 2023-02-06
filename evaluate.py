@@ -4,6 +4,8 @@ import numpy as np
 from keras.models import load_model
 from matplotlib import pyplot as plt
 
+img_width, img_height = 240, 240
+
 MODEL_PATH = "cnn-parameters-improvement-23-0.91.model"
 best_model = load_model(filepath=MODEL_PATH)
 
@@ -67,8 +69,6 @@ def crop_brain_contour(img, plot=False):
 
 
 def predict(filepath):
-    img_width, img_height = 240, 240
-
     img = cv2.imread(filepath)
     img = crop_brain_contour(img, plot=False)
     img = cv2.resize(img, dsize=(img_width, img_height), interpolation=cv2.INTER_CUBIC)

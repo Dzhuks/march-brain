@@ -14,14 +14,15 @@
 #
 # ///////////////////////////////////////////////////////////////
 
-import sys
 import os
 import platform
+import sys
 
 # IMPORT / GUI AND MODULES AND WIDGETS
 # ///////////////////////////////////////////////////////////////
 from modules import *
 from widgets import *
+
 os.environ["QT_FONT_DPI"] = "96" # FIX Problem for High DPI and Scale above 100%
 
 # SET AS GLOBAL WIDGETS
@@ -71,6 +72,9 @@ class MainWindow(QMainWindow):
         widgets.btn_about_cancer.clicked.connect(self.buttonClick)
         widgets.btn_instructions.clicked.connect(self.buttonClick)
 
+        # MAIN PAGE BUTTONS
+        widgets.btn_load.clicked.connect(self.buttonClick)
+
         # SHOW APP
         # ///////////////////////////////////////////////////////////////
         self.show()
@@ -92,6 +96,9 @@ class MainWindow(QMainWindow):
         # ///////////////////////////////////////////////////////////////
         widgets.stackedWidget.setCurrentWidget(widgets.detection)
         widgets.btn_detection.setStyleSheet(UIFunctions.selectMenu(widgets.btn_detection.styleSheet()))
+
+        self.img_width = self.img_height = 400
+        self.set_image(r"images\images\default.png")
 
 
     # BUTTONS CLICK
@@ -120,15 +127,21 @@ class MainWindow(QMainWindow):
             UIFunctions.resetStyle(self, btnName) # RESET ANOTHERS BUTTONS SELECTED
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet())) # SELECT MENU
 
+        if btnName == "btn_load":
+            self.open_image()
+
+        if btnName == "btn_evaluate":
+            pass
+
+        if btnName == "btn_compare":
+            pass
+
         if btnName == "btn_save":
             print("Save BTN clicked!")
 
         # PRINT BTN NAME
         print(f'Button "{btnName}" pressed!')
 
-
-    # RESIZE EVENTS
-    # ///////////////////////////////////////////////////////////////
     def resizeEvent(self, event):
         # Update Size Grips
         UIFunctions.resize_grips(self)
@@ -144,6 +157,20 @@ class MainWindow(QMainWindow):
             print('Mouse click: LEFT CLICK')
         if event.buttons() == Qt.RightButton:
             print('Mouse click: RIGHT CLICK')
+
+    def set_image(self, filename):
+        self.current_file = filename
+        pixmap = QPixmap(self.current_file)
+        pixmap = pixmap.scaled(self.img_width, self.img_height)
+        widgets.img_brain.setPixmap(pixmap)
+
+    def open_image(self):
+        options = QFileDialog.Options()
+        filename, _ = QFileDialog.getOpenFileName(self, "Открыть файл", "", "Виды изображение (*.png, *.jpg)",
+                                                    options=options)
+        if filename != "":
+            self.set_image(filename)
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
