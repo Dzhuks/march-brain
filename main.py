@@ -81,7 +81,6 @@ class MainWindow(QMainWindow):
         # LEFT MENUS
         widgets.btn_detection.clicked.connect(self.buttonClick)
         widgets.btn_about_cancer.clicked.connect(self.buttonClick)
-        widgets.btn_instructions.clicked.connect(self.buttonClick)
 
         # MAIN PAGE BUTTONS
         widgets.btn_load.clicked.connect(self.buttonClick)

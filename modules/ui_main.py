@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainuJDyJc.ui'
+## Form generated from reading UI file 'mainCyqciC.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.1.0
+## Created by: Qt User Interface Compiler version 6.0.2
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -12,17 +12,18 @@ from PySide6.QtCore import *
 from PySide6.QtGui import *
 from PySide6.QtWidgets import *
 
-from . resources_rc import *
+from modules import resources_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1280, 720)
+        MainWindow.resize(1280, 716)
         MainWindow.setMinimumSize(QSize(940, 560))
         self.styleSheet = QWidget(MainWindow)
         self.styleSheet.setObjectName(u"styleSheet")
         font = QFont()
+        font.setFamily(u"Segoe UI")
         font.setPointSize(10)
         font.setBold(False)
         font.setItalic(False)
@@ -547,10 +548,8 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "")
-        self.appMargins = QVBoxLayout(self.styleSheet)
-        self.appMargins.setSpacing(0)
-        self.appMargins.setObjectName(u"appMargins")
-        self.appMargins.setContentsMargins(10, 10, 10, 10)
+        self.gridLayout = QGridLayout(self.styleSheet)
+        self.gridLayout.setObjectName(u"gridLayout")
         self.bgApp = QFrame(self.styleSheet)
         self.bgApp.setObjectName(u"bgApp")
         self.bgApp.setStyleSheet(u"")
@@ -587,6 +586,7 @@ class Ui_MainWindow(object):
         self.titleLeftApp.setObjectName(u"titleLeftApp")
         self.titleLeftApp.setGeometry(QRect(70, 8, 160, 20))
         font1 = QFont()
+        font1.setFamily(u"Segoe UI Semibold")
         font1.setPointSize(12)
         font1.setBold(False)
         font1.setItalic(False)
@@ -597,6 +597,7 @@ class Ui_MainWindow(object):
         self.titleLeftDescription.setGeometry(QRect(70, 27, 160, 16))
         self.titleLeftDescription.setMaximumSize(QSize(16777215, 16))
         font2 = QFont()
+        font2.setFamily(u"Segoe UI")
         font2.setPointSize(8)
         font2.setBold(False)
         font2.setItalic(False)
@@ -671,18 +672,6 @@ class Ui_MainWindow(object):
         self.btn_about_cancer.setStyleSheet(u"background-image: url(:/icons/images/icons/cil-chart-pie.png);")
 
         self.verticalLayout_8.addWidget(self.btn_about_cancer)
-
-        self.btn_instructions = QPushButton(self.topMenu)
-        self.btn_instructions.setObjectName(u"btn_instructions")
-        sizePolicy.setHeightForWidth(self.btn_instructions.sizePolicy().hasHeightForWidth())
-        self.btn_instructions.setSizePolicy(sizePolicy)
-        self.btn_instructions.setMinimumSize(QSize(0, 45))
-        self.btn_instructions.setFont(font)
-        self.btn_instructions.setCursor(QCursor(Qt.PointingHandCursor))
-        self.btn_instructions.setLayoutDirection(Qt.LeftToRight)
-        self.btn_instructions.setStyleSheet(u"background-image: url(:/icons/images/icons/cil-lightbulb.png);")
-
-        self.verticalLayout_8.addWidget(self.btn_instructions)
 
 
         self.verticalMenuLayout.addWidget(self.topMenu, 0, Qt.AlignTop)
@@ -921,6 +910,7 @@ class Ui_MainWindow(object):
         self.maximizeRestoreAppBtn.setMinimumSize(QSize(28, 28))
         self.maximizeRestoreAppBtn.setMaximumSize(QSize(28, 28))
         font3 = QFont()
+        font3.setFamily(u"Segoe UI")
         font3.setPointSize(10)
         font3.setBold(False)
         font3.setItalic(False)
@@ -988,6 +978,7 @@ class Ui_MainWindow(object):
         self.btn_evaluate.setObjectName(u"btn_evaluate")
         self.btn_evaluate.setGeometry(QRect(220, 430, 191, 131))
         font4 = QFont()
+        font4.setFamily(u"Segoe UI")
         font4.setBold(True)
         font4.setItalic(False)
         self.btn_evaluate.setFont(font4)
@@ -1018,22 +1009,67 @@ class Ui_MainWindow(object):
         self.about_cancer = QWidget()
         self.about_cancer.setObjectName(u"about_cancer")
         self.about_cancer.setStyleSheet(u"b")
-        self.verticalLayout = QVBoxLayout(self.about_cancer)
-        self.verticalLayout.setSpacing(10)
-        self.verticalLayout.setObjectName(u"verticalLayout")
-        self.verticalLayout.setContentsMargins(10, 10, 10, 10)
+        self.label_2 = QLabel(self.about_cancer)
+        self.label_2.setObjectName(u"label_2")
+        self.label_2.setGeometry(QRect(450, 10, 281, 51))
+        self.label_2.setStyleSheet(u"font-size: 40px;\n"
+"\n"
+"")
+        self.label_2.setAlignment(Qt.AlignCenter)
+        self.label_3 = QLabel(self.about_cancer)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setGeometry(QRect(20, 60, 201, 51))
+        self.label_3.setStyleSheet(u"font-size: 20px;\n"
+"color: rgb(255, 255, 0);")
+        self.label_4 = QLabel(self.about_cancer)
+        self.label_4.setObjectName(u"label_4")
+        self.label_4.setGeometry(QRect(20, 100, 331, 491))
+        self.label_4.setTextFormat(Qt.RichText)
+        self.label_4.setWordWrap(True)
+        self.label_6 = QLabel(self.about_cancer)
+        self.label_6.setObjectName(u"label_6")
+        self.label_6.setGeometry(QRect(380, 60, 201, 51))
+        self.label_6.setStyleSheet(u"font-size: 20px;\n"
+"color: rgb(0, 255, 0)")
+        self.line = QFrame(self.about_cancer)
+        self.line.setObjectName(u"line")
+        self.line.setGeometry(QRect(360, 100, 3, 450))
+        self.line.setStyleSheet(u"background-color: rgb(170, 0, 255)")
+        self.line.setFrameShape(QFrame.VLine)
+        self.line.setFrameShadow(QFrame.Sunken)
+        self.label_5 = QLabel(self.about_cancer)
+        self.label_5.setObjectName(u"label_5")
+        self.label_5.setGeometry(QRect(380, 100, 441, 471))
+        self.label_5.setTextFormat(Qt.RichText)
+        self.label_5.setWordWrap(True)
+        self.line_2 = QFrame(self.about_cancer)
+        self.line_2.setObjectName(u"line_2")
+        self.line_2.setGeometry(QRect(820, 100, 3, 450))
+        self.line_2.setStyleSheet(u"background-color: rgb(170, 0, 255)")
+        self.line_2.setFrameShape(QFrame.VLine)
+        self.line_2.setFrameShadow(QFrame.Sunken)
+        self.label_7 = QLabel(self.about_cancer)
+        self.label_7.setObjectName(u"label_7")
+        self.label_7.setGeometry(QRect(840, 50, 201, 51))
+        self.label_7.setStyleSheet(u"font-size: 20px;\n"
+"color: rgb(255, 85, 0)")
+        self.label_8 = QLabel(self.about_cancer)
+        self.label_8.setObjectName(u"label_8")
+        self.label_8.setGeometry(QRect(840, 100, 321, 391))
+        self.label_8.setTextFormat(Qt.RichText)
+        self.label_8.setWordWrap(True)
         self.stackedWidget.addWidget(self.about_cancer)
-        self.instructions = QWidget()
-        self.instructions.setObjectName(u"instructions")
-        self.verticalLayout_20 = QVBoxLayout(self.instructions)
+        self.widget = QWidget()
+        self.widget.setObjectName(u"widget")
+        self.verticalLayout_20 = QVBoxLayout(self.widget)
         self.verticalLayout_20.setObjectName(u"verticalLayout_20")
-        self.label = QLabel(self.instructions)
+        self.label = QLabel(self.widget)
         self.label.setObjectName(u"label")
         self.label.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_20.addWidget(self.label)
 
-        self.stackedWidget.addWidget(self.instructions)
+        self.stackedWidget.addWidget(self.widget)
 
         self.verticalLayout_15.addWidget(self.stackedWidget)
 
@@ -1136,6 +1172,7 @@ class Ui_MainWindow(object):
         self.creditsLabel.setObjectName(u"creditsLabel")
         self.creditsLabel.setMaximumSize(QSize(16777215, 16))
         font5 = QFont()
+        font5.setFamily(u"Segoe UI")
         font5.setBold(False)
         font5.setItalic(False)
         self.creditsLabel.setFont(font5)
@@ -1168,13 +1205,13 @@ class Ui_MainWindow(object):
         self.appLayout.addWidget(self.contentBox)
 
 
-        self.appMargins.addWidget(self.bgApp)
+        self.gridLayout.addWidget(self.bgApp, 0, 0, 1, 1)
 
         MainWindow.setCentralWidget(self.styleSheet)
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -1187,7 +1224,6 @@ class Ui_MainWindow(object):
         self.toggleButton.setText(QCoreApplication.translate("MainWindow", u"\u0421\u043a\u0440\u044b\u0442\u044c \u043c\u0435\u043d\u044e", None))
         self.btn_detection.setText(QCoreApplication.translate("MainWindow", u"\u0421\u043a\u0430\u043d\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435", None))
         self.btn_about_cancer.setText(QCoreApplication.translate("MainWindow", u"\u0418\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044f", None))
-        self.btn_instructions.setText(QCoreApplication.translate("MainWindow", u"\u0420\u0443\u043a\u043e\u0432\u043e\u0434\u0441\u0442\u0432\u043e", None))
         self.extraLabel.setText(QCoreApplication.translate("MainWindow", u"Left Box", None))
 #if QT_CONFIG(tooltip)
         self.extraCloseColumnBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Close left box", None))
@@ -1210,7 +1246,7 @@ class Ui_MainWindow(object):
 "<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:12pt; font-weight:600; color:#ff79c6;\">Convert QRC</span></p>\n"
 "<p align=\"center\" "
                         "style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:9pt; color:#ffffff;\">pyside6-rcc resources.qrc -o resources_rc.py</span></p></body></html>", None))
-        self.titleRightInfo.setText(QCoreApplication.translate("MainWindow", u"PyDracula APP - Theme with colors based on Dracula for Python.", None))
+        self.titleRightInfo.setText(QCoreApplication.translate("MainWindow", u"Tumbrainor - \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u0434\u043b\u044f \u043e\u0431\u043d\u0430\u0440\u0443\u0436\u0435\u043d\u0438\u044f \u043e\u043f\u0443\u0445\u043e\u043b\u0435\u0439 \u043c\u043e\u0437\u0433\u0430", None))
 #if QT_CONFIG(tooltip)
         self.minimizeAppBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Minimize", None))
 #endif // QT_CONFIG(tooltip)
@@ -1231,6 +1267,24 @@ class Ui_MainWindow(object):
         self.label_diagnosis.setText(QCoreApplication.translate("MainWindow", u"\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0441\u043d\u0438\u043c\u043e\u043a \u0438 \u043d\u0430\u0436\u043c\u0438\u0442\u0435 \u043d\u0430 \u043a\u043d\u043e\u043f\u043a\u0443", None))
         self.label_description.setText("")
         self.label_warning.setText("")
+        self.label_2.setText(QCoreApplication.translate("MainWindow", u"\u041e\u043f\u0443\u0445\u043e\u043b\u044c \u043c\u043e\u0437\u0433\u0430", None))
+        self.label_3.setText(QCoreApplication.translate("MainWindow", u"\u041e\u0431\u0449\u0430\u044f \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044f", None))
+        self.label_4.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">\u041e\u043f\u0443\u0445\u043e\u043b\u044c \u043c\u043e\u0437\u0433\u0430 - \u044d\u0442\u043e \u043e\u0431\u0440\u0430\u0437\u043e\u0432\u0430\u043d\u0438\u0435 \u0438\u043b\u0438 \u0440\u043e\u0441\u0442 \u0430\u043d\u043e\u043c\u0430\u043b\u044c\u043d\u044b\u0445 \u043a\u043b\u0435\u0442\u043e\u043a \u0432 \u0432\u0430\u0448\u0435\u043c \u043c\u043e\u0437\u0433\u0435.</span></p><p><span style=\" font-size:12pt;\">\u0421\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u0435\u0442 \u043c\u043d\u043e\u0436\u0435\u0441\u0442\u0432\u043e \u0440\u0430\u0437\u043b\u0438\u0447\u043d\u044b\u0445 \u0442\u0438\u043f\u043e\u0432 \u043e\u043f\u0443\u0445\u043e\u043b\u0435\u0439 \u043c\u043e\u0437\u0433\u0430. \u041d\u0435\u043a\u043e\u0442\u043e\u0440\u044b\u0435 \u043e\u043f\u0443\u0445\u043e\u043b\u0438 \u043c\u043e\u0437\u0433\u0430 \u044f\u0432\u043b\u044f\u044e\u0442\u0441\u044f \u043d\u0435\u0440\u0430\u043a\u043e\u0432\u044b\u043c\u0438 (</span><span style=\" font-"
+                        "size:12pt; font-weight:700;\">\u0434\u043e\u0431\u0440\u043e\u043a\u0430\u0447\u0435\u0441\u0442\u0432\u0435\u043d\u043d\u044b\u043c\u0438</span><span style=\" font-size:12pt;\">), \u0430 \u043d\u0435\u043a\u043e\u0442\u043e\u0440\u044b\u0435 -\u0440\u0430\u043a\u043e\u0432\u044b\u043c\u0438 (</span><span style=\" font-size:12pt; font-weight:700;\">\u0437\u043b\u043e\u043a\u0430\u0447\u0435\u0441\u0442\u0432\u0435\u043d\u043d\u044b\u043c\u0438</span><span style=\" font-size:12pt;\">). \u041e\u043f\u0443\u0445\u043e\u043b\u0438 \u043c\u043e\u0437\u0433\u0430 \u043c\u043e\u0433\u0443\u0442 \u0437\u0430\u0440\u043e\u0436\u0434\u0430\u0442\u044c\u0441\u044f \u0432 \u043c\u043e\u0437\u0433\u0435 (\u043f\u0435\u0440\u0432\u0438\u0447\u043d\u044b\u0435 \u043e\u043f\u0443\u0445\u043e\u043b\u0438 \u043c\u043e\u0437\u0433\u0430), \u0438\u043b\u0438 \u0440\u0430\u043a \u043c\u043e\u0436\u0435\u0442 \u0437\u0430\u0440\u043e\u0434\u0438\u0442\u044c\u0441\u044f \u0432 \u0434\u0440\u0443\u0433\u0438\u0445 \u0447\u0430\u0441\u0442"
+                        "\u044f\u0445 \u0442\u0435\u043b\u0430 \u0438 \u0440\u0430\u0441\u043f\u0440\u043e\u0441\u0442\u0440\u0430\u043d\u0438\u0442\u044c\u0441\u044f \u043d\u0430 \u043c\u043e\u0437\u0433 \u0432 \u0432\u0438\u0434\u0435 \u0432\u0442\u043e\u0440\u0438\u0447\u043d\u044b\u0445 (\u043c\u0435\u0442\u0430\u0441\u0442\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0445) \u043e\u043f\u0443\u0445\u043e\u043b\u0435\u0439 \u043c\u043e\u0437\u0433\u0430.</span></p><p><span style=\" font-size:12pt;\">\u0421\u043a\u043e\u0440\u043e\u0441\u0442\u044c \u0440\u043e\u0441\u0442\u0430 \u043e\u043f\u0443\u0445\u043e\u043b\u0438 \u043c\u043e\u0437\u0433\u0430 \u043c\u043e\u0436\u0435\u0442 \u0441\u0438\u043b\u044c\u043d\u043e \u0432\u0430\u0440\u044c\u0438\u0440\u043e\u0432\u0430\u0442\u044c\u0441\u044f. \u0421\u043a\u043e\u0440\u043e\u0441\u0442\u044c \u0440\u043e\u0441\u0442\u0430, \u0430 \u0442\u0430\u043a\u0436\u0435 \u0440\u0430\u0441\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u0435 \u043e\u043f\u0443\u0445\u043e\u043b\u0438 \u043c"
+                        "\u043e\u0437\u0433\u0430 \u043e\u043f\u0440\u0435\u0434\u0435\u043b\u044f\u044e\u0442, \u043a\u0430\u043a \u043e\u043d\u0430 \u043f\u043e\u0432\u043b\u0438\u044f\u0435\u0442 \u043d\u0430 \u0440\u0430\u0431\u043e\u0442\u0443 \u0432\u0430\u0448\u0435\u0439 \u043d\u0435\u0440\u0432\u043d\u043e\u0439 \u0441\u0438\u0441\u0442\u0435\u043c\u044b.</span></p><p><span style=\" font-size:12pt;\">\u0412\u0430\u0440\u0438\u0430\u043d\u0442\u044b \u043b\u0435\u0447\u0435\u043d\u0438\u044f \u043e\u043f\u0443\u0445\u043e\u043b\u0435\u0439 \u043c\u043e\u0437\u0433\u0430 \u0437\u0430\u0432\u0438\u0441\u044f\u0442 \u043e\u0442 </span><span style=\" font-size:12pt; font-style:italic;\">\u0442\u0438\u043f\u0430 \u043e\u043f\u0443\u0445\u043e\u043b\u0438 \u043c\u043e\u0437\u0433\u0430</span><span style=\" font-size:12pt;\">, \u0430 \u0442\u0430\u043a\u0436\u0435 \u043e\u0442 \u0435\u0435 </span><span style=\" font-size:12pt; font-style:italic;\">\u0440\u0430\u0437\u043c\u0435\u0440\u0430</span><span style=\" font-size:12pt;\"> \u0438"
+                        " </span><span style=\" font-size:12pt; font-style:italic;\">\u0440\u0430\u0441\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u044f</span><span style=\" font-size:12pt;\">.</span></p></body></html>", None))
+        self.label_6.setText(QCoreApplication.translate("MainWindow", u"\u0421\u0438\u043c\u043f\u0442\u043e\u043c\u044b", None))
+        self.label_5.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">\u041f\u0440\u0438\u0437\u043d\u0430\u043a\u0438 \u0438 \u0441\u0438\u043c\u043f\u0442\u043e\u043c\u044b \u043e\u043f\u0443\u0445\u043e\u043b\u0438 \u043c\u043e\u0437\u0433\u0430 \u0441\u0438\u043b\u044c\u043d\u043e \u0432\u0430\u0440\u044c\u0438\u0440\u0443\u044e\u0442\u0441\u044f \u0438 \u0437\u0430\u0432\u0438\u0441\u044f\u0442 \u043e\u0442 \u0440\u0430\u0437\u043c\u0435\u0440\u0430, \u0440\u0430\u0441\u043f\u043e\u043b\u043e\u0436\u0435\u043d\u0438\u044f \u0438 \u0441\u043a\u043e\u0440\u043e\u0441\u0442\u0438 \u0440\u043e\u0441\u0442\u0430 \u043e\u043f\u0443\u0445\u043e\u043b\u0438 \u043c\u043e\u0437\u0433\u0430. </span><span style=\" font-size:12pt; font-weight:700;\">\u0417\u0430\u043f\u0438\u0448\u0438\u0442\u0435\u0441\u044c \u043d\u0430 \u043f\u0440\u0438\u0435\u043c \u043a \u0432\u0440\u0430\u0447\u0443</span><span style=\" font-size:12pt;\">, \u0435\u0441\u043b\u0438 \u0443 \u0432\u0430\u0441 \u0435\u0441\u0442\u044c \u043f\u043e\u0441\u0442\u043e"
+                        "\u044f\u043d\u043d\u044b\u0435 \u043f\u0440\u0438\u0437\u043d\u0430\u043a\u0438 \u0438 \u0441\u0438\u043c\u043f\u0442\u043e\u043c\u044b, \u043a\u043e\u0442\u043e\u0440\u044b\u0435 \u0432\u0430\u0441 \u0431\u0435\u0441\u043f\u043e\u043a\u043e\u044f\u0442.</span></p><p><span style=\" font-size:12pt;\">\u041e\u0431\u0449\u0438\u0435 \u043f\u0440\u0438\u0437\u043d\u0430\u043a\u0438 \u0438 \u0441\u0438\u043c\u043f\u0442\u043e\u043c\u044b, \u0432\u044b\u0437\u0432\u0430\u043d\u043d\u044b\u0435 \u043e\u043f\u0443\u0445\u043e\u043b\u044f\u043c\u0438 \u0433\u043e\u043b\u043e\u0432\u043d\u043e\u0433\u043e \u043c\u043e\u0437\u0433\u0430, \u043c\u043e\u0433\u0443\u0442 \u0432\u043a\u043b\u044e\u0447\u0430\u0442\u044c:</span></p><p><span style=\" font-size:10pt; font-weight:700;\">-</span><span style=\" font-size:10pt;\"> \u0413\u043e\u043b\u043e\u0432\u043d\u044b\u0435 \u0431\u043e\u043b\u0438, \u043a\u043e\u0442\u043e\u0440\u044b\u0435 \u043f\u043e\u0441\u0442\u0435\u043f\u0435\u043d\u043d\u043e \u0441\u0442\u0430\u043d\u043e"
+                        "\u0432\u044f\u0442\u0441\u044f \u0431\u043e\u043b\u0435\u0435 \u0447\u0430\u0441\u0442\u044b\u043c\u0438 \u0438 \u0431\u043e\u043b\u0435\u0435 \u0441\u0438\u043b\u044c\u043d\u044b\u043c\u0438</span></p><p><span style=\" font-size:10pt; font-weight:700;\">-</span><span style=\" font-size:10pt;\"> \u041d\u0435\u043e\u0431\u044a\u044f\u0441\u043d\u0438\u043c\u0430\u044f \u0442\u043e\u0448\u043d\u043e\u0442\u0430 \u0438\u043b\u0438 \u0440\u0432\u043e\u0442\u0430</span></p><p><span style=\" font-size:10pt; font-weight:700;\">-</span><span style=\" font-size:10pt;\"> \u041f\u0440\u043e\u0431\u043b\u0435\u043c\u044b \u0441\u043e \u0437\u0440\u0435\u043d\u0438\u0435\u043c, \u0442\u0430\u043a\u0438\u0435 \u043a\u0430\u043a \u043f\u043e\u043c\u0443\u0442\u043d\u0435\u043d\u0438\u0435 \u0437\u0440\u0435\u043d\u0438\u044f, \u0434\u0432\u043e\u0435\u043d\u0438\u0435 \u0432 \u0433\u043b\u0430\u0437\u0430\u0445 \u0438\u043b\u0438 \u043f\u043e\u0442\u0435\u0440\u044f \u043f\u0435\u0440\u0438\u0444\u0435\u0440\u0438\u0447\u0435"
+                        "\u0441\u043a\u043e\u0433\u043e \u0437\u0440\u0435\u043d\u0438\u044f</span></p><p><span style=\" font-size:10pt; font-weight:700;\">- </span><span style=\" font-size:10pt;\">\u041f\u043e\u0441\u0442\u0435\u043f\u0435\u043d\u043d\u0430\u044f \u043f\u043e\u0442\u0435\u0440\u044f \u0447\u0443\u0432\u0441\u0442\u0432\u0438\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u0438 \u0438\u043b\u0438 \u0434\u0432\u0438\u0436\u0435\u043d\u0438\u044f \u0432 \u0440\u0443\u043a\u0435 \u0438\u043b\u0438 \u043d\u043e\u0433\u0435</span></p><p><span style=\" font-size:10pt; font-weight:700;\">-</span><span style=\" font-size:10pt;\"> \u0422\u0440\u0443\u0434\u043d\u043e\u0441\u0442\u0438 \u0441 \u0440\u0430\u0432\u043d\u043e\u0432\u0435\u0441\u0438\u0435\u043c \u0438 \u0440\u0435\u0447\u044c\u044e</span></p><p><span style=\" font-size:10pt; font-weight:700;\">-</span><span style=\" font-size:10pt;\"> \u0427\u0443\u0432\u0441\u0442\u0432\u043e \u0441\u0438\u043b\u044c\u043d\u043e\u0439 \u0443\u0441\u0442\u0430\u043b\u043e\u0441\u0442"
+                        "\u0438</span></p><p><span style=\" font-size:10pt; font-weight:700;\">-</span><span style=\" font-size:10pt;\"> \u041d\u0435\u0441\u043f\u043e\u0441\u043e\u0431\u043d\u043e\u0441\u0442\u044c \u0432\u044b\u043f\u043e\u043b\u043d\u044f\u0442\u044c \u043f\u0440\u043e\u0441\u0442\u044b\u0435 \u043a\u043e\u043c\u0430\u043d\u0434\u044b</span></p><p><span style=\" font-size:10pt; font-weight:700;\">-</span><span style=\" font-size:10pt;\"> \u0421\u0443\u0434\u043e\u0440\u043e\u0433\u0438, \u043e\u0441\u043e\u0431\u0435\u043d\u043d\u043e \u0443 \u0442\u0435\u0445, \u043a\u0442\u043e \u043d\u0435 \u0441\u0442\u0440\u0430\u0434\u0430\u0435\u0442 \u0441\u0443\u0434\u043e\u0440\u043e\u0433\u0430\u043c\u0438 \u0432 \u043f\u0440\u043e\u0448\u043b\u043e\u043c</span></p><p><span style=\" font-size:10pt; font-weight:700;\">-</span><span style=\" font-size:10pt;\"> \u041f\u0440\u043e\u0431\u043b\u0435\u043c\u044b \u0441\u043e \u0441\u043b\u0443\u0445\u043e\u043c</span></p></body></html>", None))
+        self.label_7.setText(QCoreApplication.translate("MainWindow", u"\u0413\u0440\u0443\u043f\u043f\u044b \u0440\u0438\u0441\u043a\u0430", None))
+        self.label_8.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">\u0423 \u0431\u043e\u043b\u044c\u0448\u0438\u043d\u0441\u0442\u0432\u0430 \u043b\u044e\u0434\u0435\u0439 \u0441 \u043f\u0435\u0440\u0432\u0438\u0447\u043d\u044b\u043c\u0438 \u043e\u043f\u0443\u0445\u043e\u043b\u044f\u043c\u0438 \u043c\u043e\u0437\u0433\u0430 \u043f\u0440\u0438\u0447\u0438\u043d\u0430 \u0432\u043e\u0437\u043d\u0438\u043a\u043d\u043e\u0432\u0435\u043d\u0438\u044f \u043e\u043f\u0443\u0445\u043e\u043b\u0438 \u043d\u0435\u044f\u0441\u043d\u0430, \u043d\u043e \u0435\u0441\u0442\u044c \u0444\u0430\u043a\u0442\u043e\u0440\u044b \u0440\u0438\u0441\u043a\u0430.</span></p><p><span style=\" font-size:12pt;\">\u041a \u0444\u0430\u043a\u0442\u043e\u0440\u0430\u043c \u0440\u0438\u0441\u043a\u0430 \u043e\u0442\u043d\u043e\u0441\u044f\u0442\u0441\u044f:</span></p><p><span style=\" font-size:12pt; font-weight:700;\">- \u0412\u043e\u0437\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435 \u0440\u0430\u0434\u0438\u0430\u0446\u0438\u0438</span><span style=\" font"
+                        "-size:12pt;\">. \u041b\u044e\u0434\u0438, \u043a\u043e\u0442\u043e\u0440\u044b\u0435 \u043f\u043e\u0434\u0432\u0435\u0440\u0433\u043b\u0438\u0441\u044c \u0432\u043e\u0437\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u044e \u0432\u0438\u0434\u0430 \u0438\u0437\u043b\u0443\u0447\u0435\u043d\u0438\u044f, \u0438\u043c\u0435\u044e\u0442 \u043f\u043e\u0432\u044b\u0448\u0435\u043d\u043d\u044b\u0439 \u0440\u0438\u0441\u043a \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u044f \u043e\u043f\u0443\u0445\u043e\u043b\u0438 \u043c\u043e\u0437\u0433\u0430. \u0412\u043e\u0437\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435\u043c \u043c\u043e\u0436\u0435\u0442 \u0431\u044b\u0442\u044c \u043b\u0443\u0447\u0435\u0432\u0430\u044f \u0442\u0435\u0440\u0430\u043f\u0438\u044f, \u043f\u0440\u0438\u043c\u0435\u043d\u044f\u0435\u043c\u0430\u044f \u0434\u043b\u044f \u043b\u0435\u0447\u0435\u043d\u0438\u044f \u0440\u0430\u043a\u0430, \u0438 \u0440\u0430\u0434\u0438\u0430\u0446\u0438\u043e\u043d\u043d\u043e\u0435 \u043e\u0431\u043b\u0443\u0447\u0435"
+                        "\u043d\u0438\u0435.</span></p><p><span style=\" font-size:12pt; font-weight:700;\">- \u0421\u0435\u043c\u0435\u0439\u043d\u0430\u044f \u0438\u0441\u0442\u043e\u0440\u0438\u044f \u0437\u0430\u0431\u043e\u043b\u0435\u0432\u0430\u043d\u0438\u0439</span><span style=\" font-size:12pt;\">. \u041d\u0435\u0431\u043e\u043b\u044c\u0448\u0430\u044f \u0447\u0430\u0441\u0442\u044c \u043e\u043f\u0443\u0445\u043e\u043b\u0435\u0439 \u043c\u043e\u0437\u0433\u0430 \u0432\u043e\u0437\u043d\u0438\u043a\u0430\u0435\u0442 \u0443 \u043b\u044e\u0434\u0435\u0439 \u0441 \u0441\u0435\u043c\u0435\u0439\u043d\u043e\u0439 \u0438\u0441\u0442\u043e\u0440\u0438\u0435\u0439 \u043e\u043f\u0443\u0445\u043e\u043b\u0435\u0439 \u043c\u043e\u0437\u0433\u0430 \u0438\u043b\u0438 \u0441\u0435\u043c\u0435\u0439\u043d\u043e\u0439 \u0438\u0441\u0442\u043e\u0440\u0438\u0435\u0439 \u0433\u0435\u043d\u0435\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0445 \u0441\u0438\u043d\u0434\u0440\u043e\u043c\u043e\u0432, \u043a\u043e\u0442\u043e\u0440\u044b\u0435 \u043f\u043e"
+                        "\u0432\u044b\u0448\u0430\u044e\u0442 \u0440\u0438\u0441\u043a \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u044f \u043e\u043f\u0443\u0445\u043e\u043b\u0435\u0439 \u043c\u043e\u0437\u0433\u0430.</span></p></body></html>", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"NEW PAGE TEST", None))
         self.btn_message.setText(QCoreApplication.translate("MainWindow", u"Message", None))
         self.btn_print.setText(QCoreApplication.translate("MainWindow", u"Print", None))
