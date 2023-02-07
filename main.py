@@ -195,6 +195,8 @@ class MainWindow(QMainWindow):
                                                   options=options)
         if filename != "":
             self.set_image(filename)
+            widgets.label_diagnosis.setText("")
+            widgets.label_description.setText("")
 
 
 if __name__ == "__main__":
