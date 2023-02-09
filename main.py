@@ -159,7 +159,6 @@ class MainWindow(QMainWindow):
             widgets.label_diagnosis.setText(diagnosis)
             widgets.label_description.setText(QCoreApplication.translate("MainWindow", u"{}".format(description), None))
 
-
         if btnName == "btn_save":
             print("Save BTN clicked!")
 
@@ -194,8 +193,8 @@ class MainWindow(QMainWindow):
                                                   options=options)
         if filename != "":
             self.set_image(filename)
-            widgets.label_diagnosis.setText("")
-            widgets.label_description.setText("")
+            widgets.label_description.clear()
+            widgets.label_warning.clear()
 
 
 if __name__ == "__main__":

@@ -6,7 +6,7 @@ from matplotlib import pyplot as plt
 
 img_width, img_height = 240, 240
 
-MODEL_PATH = "cnn-parameters-improvement-23-0.91.model"
+MODEL_PATH = r"models\cnn-parameters-improvement-23-0.91.model"
 best_model = load_model(filepath=MODEL_PATH)
 
 
