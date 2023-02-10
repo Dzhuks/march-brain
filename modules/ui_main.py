@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainDqAQVf.ui'
+## Form generated from reading UI file 'mainKADiwy.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.1.0
 ##
@@ -13,7 +13,6 @@ from PySide6.QtGui import *
 from PySide6.QtWidgets import *
 
 from . resources_rc import *
-
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
@@ -574,13 +573,6 @@ class Ui_MainWindow(object):
         self.topLogoInfo.setMaximumSize(QSize(16777215, 50))
         self.topLogoInfo.setFrameShape(QFrame.NoFrame)
         self.topLogoInfo.setFrameShadow(QFrame.Raised)
-        self.topLogo = QFrame(self.topLogoInfo)
-        self.topLogo.setObjectName(u"topLogo")
-        self.topLogo.setGeometry(QRect(10, 5, 42, 42))
-        self.topLogo.setMinimumSize(QSize(42, 42))
-        self.topLogo.setMaximumSize(QSize(42, 42))
-        self.topLogo.setFrameShape(QFrame.NoFrame)
-        self.topLogo.setFrameShadow(QFrame.Raised)
         self.titleLeftApp = QLabel(self.topLogoInfo)
         self.titleLeftApp.setObjectName(u"titleLeftApp")
         self.titleLeftApp.setGeometry(QRect(70, 8, 160, 20))
@@ -611,33 +603,6 @@ class Ui_MainWindow(object):
         self.verticalMenuLayout.setSpacing(0)
         self.verticalMenuLayout.setObjectName(u"verticalMenuLayout")
         self.verticalMenuLayout.setContentsMargins(0, 0, 0, 0)
-        self.toggleBox = QFrame(self.leftMenuFrame)
-        self.toggleBox.setObjectName(u"toggleBox")
-        self.toggleBox.setMaximumSize(QSize(16777215, 45))
-        self.toggleBox.setFrameShape(QFrame.NoFrame)
-        self.toggleBox.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_4 = QVBoxLayout(self.toggleBox)
-        self.verticalLayout_4.setSpacing(0)
-        self.verticalLayout_4.setObjectName(u"verticalLayout_4")
-        self.verticalLayout_4.setContentsMargins(0, 0, 0, 0)
-        self.toggleButton = QPushButton(self.toggleBox)
-        self.toggleButton.setObjectName(u"toggleButton")
-        sizePolicy = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.toggleButton.sizePolicy().hasHeightForWidth())
-        self.toggleButton.setSizePolicy(sizePolicy)
-        self.toggleButton.setMinimumSize(QSize(0, 45))
-        self.toggleButton.setFont(font)
-        self.toggleButton.setCursor(QCursor(Qt.PointingHandCursor))
-        self.toggleButton.setLayoutDirection(Qt.LeftToRight)
-        self.toggleButton.setStyleSheet(u"background-image: url(:/icons/images/icons/icon_menu.png);")
-
-        self.verticalLayout_4.addWidget(self.toggleButton)
-
-
-        self.verticalMenuLayout.addWidget(self.toggleBox)
-
         self.topMenu = QFrame(self.leftMenuFrame)
         self.topMenu.setObjectName(u"topMenu")
         self.topMenu.setFrameShape(QFrame.NoFrame)
@@ -645,6 +610,9 @@ class Ui_MainWindow(object):
         self.btn_about_cancer = QPushButton(self.topMenu)
         self.btn_about_cancer.setObjectName(u"btn_about_cancer")
         self.btn_about_cancer.setGeometry(QRect(0, 50, 60, 45))
+        sizePolicy = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.btn_about_cancer.sizePolicy().hasHeightForWidth())
         self.btn_about_cancer.setSizePolicy(sizePolicy)
         self.btn_about_cancer.setMinimumSize(QSize(0, 45))
@@ -1221,7 +1189,6 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
         self.titleLeftApp.setText(QCoreApplication.translate("MainWindow", u"Nazvanie", None))
         self.titleLeftDescription.setText(QCoreApplication.translate("MainWindow", u"Brain Tumor detector", None))
-        self.toggleButton.setText(QCoreApplication.translate("MainWindow", u"\u0421\u043a\u0440\u044b\u0442\u044c \u043c\u0435\u043d\u044e", None))
         self.btn_about_cancer.setText(QCoreApplication.translate("MainWindow", u"\u0418\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044f", None))
         self.btn_detection.setText(QCoreApplication.translate("MainWindow", u"\u0421\u043a\u0430\u043d\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435", None))
         self.btn_history.setText(QCoreApplication.translate("MainWindow", u"\u0418\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044f", None))
