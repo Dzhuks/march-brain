@@ -149,13 +149,19 @@ class MainWindow(QMainWindow):
             if pred:
                 # если найдена опухоль, то нахождение ее вида
                 diagnosis_num = classify(self.current_file)
-                widgets.label_warning.setText("Настоятельная просьба посетить врача-онколога!")
+                message = "Настоятельная просьба посетить врача-онколога!"
+                color = "#FF0032"
             else:
+                message = "Рекомендуем удостовериться в этом у врача-онколога."
+                color = "#51D581"
                 diagnosis_num = 0
 
             diagnosis = LABELS[diagnosis_num]
             # получение описания болезни из файла и корректное отображение символов перевода строки и табуляций
             description = get_descr_type(diagnosis_num).replace("\\n", "\n").replace("\\t", "\t")
+
+            widgets.label_warning.setText(message)
+            widgets.label_warning.setStyleSheet(f"font-size: 26px; color: {color}; font-weight: bold")
 
             widgets.label_diagnosis.setText(diagnosis)
             widgets.label_description.setText(QCoreApplication.translate("MainWindow", u"{}".format(description), None))
