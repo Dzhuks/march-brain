@@ -70,7 +70,7 @@ class MainWindow(QMainWindow):
 
         # TOGGLE MENU
         # ///////////////////////////////////////////////////////////////
-        widgets.toggleButton.clicked.connect(lambda: UIFunctions.toggleMenu(self, True))
+        widgets.toggleButton.clicked.connect(lambda: UIFunctions.toggleMenu(self, False))
 
         # SET UI DEFINITIONS
         # ///////////////////////////////////////////////////////////////
@@ -81,6 +81,7 @@ class MainWindow(QMainWindow):
         # LEFT MENUS
         widgets.btn_detection.clicked.connect(self.buttonClick)
         widgets.btn_about_cancer.clicked.connect(self.buttonClick)
+        widgets.btn_history.clicked.connect(self.buttonClick)
 
         # MAIN PAGE BUTTONS
         widgets.btn_load.clicked.connect(self.buttonClick)
@@ -132,9 +133,9 @@ class MainWindow(QMainWindow):
             UIFunctions.resetStyle(self, btnName)
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))
 
-        # SHOW instructions PAGE
-        if btnName == "btn_instructions":
-            widgets.stackedWidget.setCurrentWidget(widgets.instructions)  # SET PAGE
+        # SHOW history PAGE
+        if btnName == "btn_history":
+            widgets.stackedWidget.setCurrentWidget(widgets.history)  # SET PAGE
             UIFunctions.resetStyle(self, btnName)  # RESET ANOTHERS BUTTONS SELECTED
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))  # SELECT MENU
 

@@ -23,7 +23,6 @@
   <widget class="QWidget" name="styleSheet">
    <property name="font">
     <font>
-     <family>Segoe UI</family>
      <pointsize>10</pointsize>
      <italic>false</italic>
      <bold>false</bold>
@@ -660,7 +659,6 @@ Button */
              </property>
              <property name="font">
               <font>
-               <family>Segoe UI Semibold</family>
                <pointsize>12</pointsize>
                <italic>false</italic>
                <bold>false</bold>
@@ -690,7 +688,6 @@ Button */
              </property>
              <property name="font">
               <font>
-               <family>Segoe UI</family>
                <pointsize>8</pointsize>
                <italic>false</italic>
                <bold>false</bold>
@@ -775,7 +772,6 @@ Button */
                   </property>
                   <property name="font">
                    <font>
-                    <family>Segoe UI</family>
                     <pointsize>10</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -798,7 +794,7 @@ Button */
                </layout>
               </widget>
              </item>
-             <item alignment="Qt::AlignTop">
+             <item>
               <widget class="QFrame" name="topMenu">
                <property name="frameShape">
                 <enum>QFrame::NoFrame</enum>
@@ -806,95 +802,129 @@ Button */
                <property name="frameShadow">
                 <enum>QFrame::Raised</enum>
                </property>
-               <layout class="QVBoxLayout" name="verticalLayout_8">
-                <property name="spacing">
-                 <number>0</number>
+               <widget class="QPushButton" name="btn_about_cancer">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>50</y>
+                  <width>60</width>
+                  <height>45</height>
+                 </rect>
                 </property>
-                <property name="leftMargin">
-                 <number>0</number>
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
                 </property>
-                <property name="topMargin">
-                 <number>0</number>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>45</height>
+                 </size>
                 </property>
-                <property name="rightMargin">
-                 <number>0</number>
+                <property name="font">
+                 <font>
+                  <pointsize>10</pointsize>
+                  <italic>false</italic>
+                  <bold>false</bold>
+                 </font>
                 </property>
-                <property name="bottomMargin">
-                 <number>0</number>
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
                 </property>
-                <item>
-                 <widget class="QPushButton" name="btn_detection">
-                  <property name="sizePolicy">
-                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                   </sizepolicy>
-                  </property>
-                  <property name="minimumSize">
-                   <size>
-                    <width>0</width>
-                    <height>45</height>
-                   </size>
-                  </property>
-                  <property name="font">
-                   <font>
-                    <family>Segoe UI</family>
-                    <pointsize>10</pointsize>
-                    <italic>false</italic>
-                    <bold>false</bold>
-                   </font>
-                  </property>
-                  <property name="cursor">
-                   <cursorShape>PointingHandCursor</cursorShape>
-                  </property>
-                  <property name="layoutDirection">
-                   <enum>Qt::LeftToRight</enum>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">background-image: url(:/icons/images/icons/cil-magnifying-glass.png);</string>
-                  </property>
-                  <property name="text">
-                   <string>Сканирование</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="btn_about_cancer">
-                  <property name="sizePolicy">
-                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                   </sizepolicy>
-                  </property>
-                  <property name="minimumSize">
-                   <size>
-                    <width>0</width>
-                    <height>45</height>
-                   </size>
-                  </property>
-                  <property name="font">
-                   <font>
-                    <family>Segoe UI</family>
-                    <pointsize>10</pointsize>
-                    <italic>false</italic>
-                    <bold>false</bold>
-                   </font>
-                  </property>
-                  <property name="cursor">
-                   <cursorShape>PointingHandCursor</cursorShape>
-                  </property>
-                  <property name="layoutDirection">
-                   <enum>Qt::LeftToRight</enum>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">background-image: url(:/icons/images/icons/cil-chart-pie.png);</string>
-                  </property>
-                  <property name="text">
-                   <string>Информация</string>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
+                <property name="layoutDirection">
+                 <enum>Qt::LeftToRight</enum>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-image: url(:/icons/images/icons/cil-chart-pie.png);</string>
+                </property>
+                <property name="text">
+                 <string>Информация</string>
+                </property>
+               </widget>
+               <widget class="QPushButton" name="btn_detection">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>60</width>
+                  <height>45</height>
+                 </rect>
+                </property>
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>45</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>10</pointsize>
+                  <italic>false</italic>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="layoutDirection">
+                 <enum>Qt::LeftToRight</enum>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-image: url(:/icons/images/icons/cil-magnifying-glass.png);</string>
+                </property>
+                <property name="text">
+                 <string>Сканирование</string>
+                </property>
+               </widget>
+               <widget class="QPushButton" name="btn_history">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>100</y>
+                  <width>60</width>
+                  <height>45</height>
+                 </rect>
+                </property>
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>45</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>10</pointsize>
+                  <italic>false</italic>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="cursor">
+                 <cursorShape>PointingHandCursor</cursorShape>
+                </property>
+                <property name="layoutDirection">
+                 <enum>Qt::LeftToRight</enum>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-image: url(:/icons/images/icons/cil-history.png);</string>
+                </property>
+                <property name="text">
+                 <string>Информация</string>
+                </property>
+               </widget>
               </widget>
              </item>
              <item alignment="Qt::AlignBottom">
@@ -1155,7 +1185,6 @@ Button */
                   </property>
                   <property name="font">
                    <font>
-                    <family>Segoe UI</family>
                     <pointsize>10</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -1191,7 +1220,6 @@ Button */
                   </property>
                   <property name="font">
                    <font>
-                    <family>Segoe UI</family>
                     <pointsize>10</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -1227,7 +1255,6 @@ Button */
                   </property>
                   <property name="font">
                    <font>
-                    <family>Segoe UI</family>
                     <pointsize>10</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -1417,7 +1444,6 @@ p, li { white-space: pre-wrap; }
                   </property>
                   <property name="font">
                    <font>
-                    <family>Segoe UI</family>
                     <pointsize>10</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -1515,7 +1541,6 @@ p, li { white-space: pre-wrap; }
                   </property>
                   <property name="font">
                    <font>
-                    <family>Segoe UI</family>
                     <pointsize>10</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -1665,7 +1690,7 @@ p, li { white-space: pre-wrap; }
                       <string notr="true">background: transparent;</string>
                      </property>
                      <property name="currentIndex">
-                      <number>1</number>
+                      <number>0</number>
                      </property>
                      <widget class="QWidget" name="detection">
                       <property name="styleSheet">
@@ -1688,14 +1713,13 @@ p, li { white-space: pre-wrap; }
                        <property name="geometry">
                         <rect>
                          <x>220</x>
-                         <y>430</y>
+                         <y>480</y>
                          <width>191</width>
-                         <height>131</height>
+                         <height>121</height>
                         </rect>
                        </property>
                        <property name="font">
                         <font>
-                         <family>Segoe UI</family>
                          <pointsize>-1</pointsize>
                          <italic>false</italic>
                          <bold>true</bold>
@@ -1713,9 +1737,9 @@ p, li { white-space: pre-wrap; }
                        <property name="geometry">
                         <rect>
                          <x>10</x>
-                         <y>430</y>
+                         <y>480</y>
                          <width>195</width>
-                         <height>131</height>
+                         <height>121</height>
                         </rect>
                        </property>
                        <property name="styleSheet">
@@ -1730,14 +1754,13 @@ p, li { white-space: pre-wrap; }
                        <property name="geometry">
                         <rect>
                          <x>470</x>
-                         <y>-10</y>
+                         <y>-20</y>
                          <width>641</width>
                          <height>61</height>
                         </rect>
                        </property>
                        <property name="font">
                         <font>
-                         <family>Segoe UI</family>
                          <pointsize>-1</pointsize>
                          <italic>false</italic>
                          <bold>true</bold>
@@ -1756,8 +1779,8 @@ p, li { white-space: pre-wrap; }
                       <widget class="QLabel" name="label_description">
                        <property name="geometry">
                         <rect>
-                         <x>450</x>
-                         <y>50</y>
+                         <x>460</x>
+                         <y>90</y>
                          <width>661</width>
                          <height>511</height>
                         </rect>
@@ -1785,13 +1808,33 @@ p, li { white-space: pre-wrap; }
                        <property name="geometry">
                         <rect>
                          <x>450</x>
-                         <y>560</y>
+                         <y>40</y>
                          <width>711</width>
                          <height>31</height>
                         </rect>
                        </property>
                        <property name="styleSheet">
                         <string notr="true">font-size: 26px; color: #FF0032; font-weight: bold</string>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                      <widget class="QLineEdit" name="input_name">
+                       <property name="geometry">
+                        <rect>
+                         <x>0</x>
+                         <y>431</y>
+                         <width>411</width>
+                         <height>31</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>10</pointsize>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
                        </property>
                        <property name="text">
                         <string/>
@@ -1964,7 +2007,7 @@ color: rgb(255, 85, 0)</string>
                        </property>
                       </widget>
                      </widget>
-                     <widget class="QWidget" name="widget">
+                     <widget class="QWidget" name="history">
                       <layout class="QVBoxLayout" name="verticalLayout_20">
                        <item>
                         <widget class="QLabel" name="label">
@@ -2099,7 +2142,6 @@ color: rgb(255, 85, 0)</string>
                            </property>
                            <property name="font">
                             <font>
-                             <family>Segoe UI</family>
                              <pointsize>10</pointsize>
                              <italic>false</italic>
                              <bold>false</bold>
@@ -2135,7 +2177,6 @@ color: rgb(255, 85, 0)</string>
                            </property>
                            <property name="font">
                             <font>
-                             <family>Segoe UI</family>
                              <pointsize>10</pointsize>
                              <italic>false</italic>
                              <bold>false</bold>
@@ -2171,7 +2212,6 @@ color: rgb(255, 85, 0)</string>
                            </property>
                            <property name="font">
                             <font>
-                             <family>Segoe UI</family>
                              <pointsize>10</pointsize>
                              <italic>false</italic>
                              <bold>false</bold>
@@ -2249,7 +2289,6 @@ color: rgb(255, 85, 0)</string>
                   </property>
                   <property name="font">
                    <font>
-                    <family>Segoe UI</family>
                     <pointsize>-1</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>

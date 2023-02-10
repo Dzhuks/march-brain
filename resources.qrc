@@ -2,7 +2,7 @@
   <qresource prefix="images">
     <file>images/images/load_btn.png</file>
     <file>images/images/detect_btn.png</file>
-    <file>images/images/PyDracula.png</file>
+    <file>images/images/logo.png</file>
     <file>images/images/PyDracula_vertical.png</file>
   </qresource>
   <qresource prefix="icons">

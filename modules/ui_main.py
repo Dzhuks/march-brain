@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainCyqciC.ui'
+## Form generated from reading UI file 'mainDqAQVf.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.0.2
+## Created by: Qt User Interface Compiler version 6.1.0
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -12,7 +12,7 @@ from PySide6.QtCore import *
 from PySide6.QtGui import *
 from PySide6.QtWidgets import *
 
-from modules import resources_rc
+from . resources_rc import *
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -23,7 +23,6 @@ class Ui_MainWindow(object):
         self.styleSheet = QWidget(MainWindow)
         self.styleSheet.setObjectName(u"styleSheet")
         font = QFont()
-        font.setFamily(u"Segoe UI")
         font.setPointSize(10)
         font.setBold(False)
         font.setItalic(False)
@@ -586,7 +585,6 @@ class Ui_MainWindow(object):
         self.titleLeftApp.setObjectName(u"titleLeftApp")
         self.titleLeftApp.setGeometry(QRect(70, 8, 160, 20))
         font1 = QFont()
-        font1.setFamily(u"Segoe UI Semibold")
         font1.setPointSize(12)
         font1.setBold(False)
         font1.setItalic(False)
@@ -597,7 +595,6 @@ class Ui_MainWindow(object):
         self.titleLeftDescription.setGeometry(QRect(70, 27, 160, 16))
         self.titleLeftDescription.setMaximumSize(QSize(16777215, 16))
         font2 = QFont()
-        font2.setFamily(u"Segoe UI")
         font2.setPointSize(8)
         font2.setBold(False)
         font2.setItalic(False)
@@ -645,24 +642,9 @@ class Ui_MainWindow(object):
         self.topMenu.setObjectName(u"topMenu")
         self.topMenu.setFrameShape(QFrame.NoFrame)
         self.topMenu.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_8 = QVBoxLayout(self.topMenu)
-        self.verticalLayout_8.setSpacing(0)
-        self.verticalLayout_8.setObjectName(u"verticalLayout_8")
-        self.verticalLayout_8.setContentsMargins(0, 0, 0, 0)
-        self.btn_detection = QPushButton(self.topMenu)
-        self.btn_detection.setObjectName(u"btn_detection")
-        sizePolicy.setHeightForWidth(self.btn_detection.sizePolicy().hasHeightForWidth())
-        self.btn_detection.setSizePolicy(sizePolicy)
-        self.btn_detection.setMinimumSize(QSize(0, 45))
-        self.btn_detection.setFont(font)
-        self.btn_detection.setCursor(QCursor(Qt.PointingHandCursor))
-        self.btn_detection.setLayoutDirection(Qt.LeftToRight)
-        self.btn_detection.setStyleSheet(u"background-image: url(:/icons/images/icons/cil-magnifying-glass.png);")
-
-        self.verticalLayout_8.addWidget(self.btn_detection)
-
         self.btn_about_cancer = QPushButton(self.topMenu)
         self.btn_about_cancer.setObjectName(u"btn_about_cancer")
+        self.btn_about_cancer.setGeometry(QRect(0, 50, 60, 45))
         sizePolicy.setHeightForWidth(self.btn_about_cancer.sizePolicy().hasHeightForWidth())
         self.btn_about_cancer.setSizePolicy(sizePolicy)
         self.btn_about_cancer.setMinimumSize(QSize(0, 45))
@@ -670,11 +652,28 @@ class Ui_MainWindow(object):
         self.btn_about_cancer.setCursor(QCursor(Qt.PointingHandCursor))
         self.btn_about_cancer.setLayoutDirection(Qt.LeftToRight)
         self.btn_about_cancer.setStyleSheet(u"background-image: url(:/icons/images/icons/cil-chart-pie.png);")
+        self.btn_detection = QPushButton(self.topMenu)
+        self.btn_detection.setObjectName(u"btn_detection")
+        self.btn_detection.setGeometry(QRect(0, 0, 60, 45))
+        sizePolicy.setHeightForWidth(self.btn_detection.sizePolicy().hasHeightForWidth())
+        self.btn_detection.setSizePolicy(sizePolicy)
+        self.btn_detection.setMinimumSize(QSize(0, 45))
+        self.btn_detection.setFont(font)
+        self.btn_detection.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btn_detection.setLayoutDirection(Qt.LeftToRight)
+        self.btn_detection.setStyleSheet(u"background-image: url(:/icons/images/icons/cil-magnifying-glass.png);")
+        self.btn_history = QPushButton(self.topMenu)
+        self.btn_history.setObjectName(u"btn_history")
+        self.btn_history.setGeometry(QRect(0, 100, 60, 45))
+        sizePolicy.setHeightForWidth(self.btn_history.sizePolicy().hasHeightForWidth())
+        self.btn_history.setSizePolicy(sizePolicy)
+        self.btn_history.setMinimumSize(QSize(0, 45))
+        self.btn_history.setFont(font)
+        self.btn_history.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btn_history.setLayoutDirection(Qt.LeftToRight)
+        self.btn_history.setStyleSheet(u"background-image: url(:/icons/images/icons/cil-history.png);")
 
-        self.verticalLayout_8.addWidget(self.btn_about_cancer)
-
-
-        self.verticalMenuLayout.addWidget(self.topMenu, 0, Qt.AlignTop)
+        self.verticalMenuLayout.addWidget(self.topMenu)
 
         self.bottomMenu = QFrame(self.leftMenuFrame)
         self.bottomMenu.setObjectName(u"bottomMenu")
@@ -910,7 +909,6 @@ class Ui_MainWindow(object):
         self.maximizeRestoreAppBtn.setMinimumSize(QSize(28, 28))
         self.maximizeRestoreAppBtn.setMaximumSize(QSize(28, 28))
         font3 = QFont()
-        font3.setFamily(u"Segoe UI")
         font3.setPointSize(10)
         font3.setBold(False)
         font3.setItalic(False)
@@ -976,26 +974,25 @@ class Ui_MainWindow(object):
         self.img_brain.setGeometry(QRect(10, 10, 400, 400))
         self.btn_evaluate = QPushButton(self.detection)
         self.btn_evaluate.setObjectName(u"btn_evaluate")
-        self.btn_evaluate.setGeometry(QRect(220, 430, 191, 131))
+        self.btn_evaluate.setGeometry(QRect(220, 480, 191, 121))
         font4 = QFont()
-        font4.setFamily(u"Segoe UI")
         font4.setBold(True)
         font4.setItalic(False)
         self.btn_evaluate.setFont(font4)
         self.btn_evaluate.setStyleSheet(u"border-radius: 25px; background-image: url(:/images/images/images/detect_btn.png); font-size: 19px; font-weight: bold; background-color: #DBA03A;")
         self.btn_load = QPushButton(self.detection)
         self.btn_load.setObjectName(u"btn_load")
-        self.btn_load.setGeometry(QRect(10, 430, 195, 131))
+        self.btn_load.setGeometry(QRect(10, 480, 195, 121))
         self.btn_load.setStyleSheet(u"border-radius: 25px; background: url(:/images/images/images/load_btn.png);  font-size: 19px; font-weight: bold; background-color: #7dc68f;")
         self.label_diagnosis = QLabel(self.detection)
         self.label_diagnosis.setObjectName(u"label_diagnosis")
-        self.label_diagnosis.setGeometry(QRect(470, -10, 641, 61))
+        self.label_diagnosis.setGeometry(QRect(470, -20, 641, 61))
         self.label_diagnosis.setFont(font4)
         self.label_diagnosis.setStyleSheet(u"font-weight: bold; font-size: 30px;")
         self.label_diagnosis.setAlignment(Qt.AlignCenter)
         self.label_description = QLabel(self.detection)
         self.label_description.setObjectName(u"label_description")
-        self.label_description.setGeometry(QRect(450, 50, 661, 511))
+        self.label_description.setGeometry(QRect(460, 90, 661, 511))
         self.label_description.setStyleSheet(u"font-size: 17px;")
         self.label_description.setLineWidth(1)
         self.label_description.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
@@ -1003,8 +1000,12 @@ class Ui_MainWindow(object):
         self.label_description.setMargin(0)
         self.label_warning = QLabel(self.detection)
         self.label_warning.setObjectName(u"label_warning")
-        self.label_warning.setGeometry(QRect(450, 560, 711, 31))
+        self.label_warning.setGeometry(QRect(450, 40, 711, 31))
         self.label_warning.setStyleSheet(u"font-size: 26px; color: #FF0032; font-weight: bold")
+        self.input_name = QLineEdit(self.detection)
+        self.input_name.setObjectName(u"input_name")
+        self.input_name.setGeometry(QRect(0, 431, 411, 31))
+        self.input_name.setFont(font)
         self.stackedWidget.addWidget(self.detection)
         self.about_cancer = QWidget()
         self.about_cancer.setObjectName(u"about_cancer")
@@ -1059,17 +1060,17 @@ class Ui_MainWindow(object):
         self.label_8.setTextFormat(Qt.RichText)
         self.label_8.setWordWrap(True)
         self.stackedWidget.addWidget(self.about_cancer)
-        self.widget = QWidget()
-        self.widget.setObjectName(u"widget")
-        self.verticalLayout_20 = QVBoxLayout(self.widget)
+        self.history = QWidget()
+        self.history.setObjectName(u"history")
+        self.verticalLayout_20 = QVBoxLayout(self.history)
         self.verticalLayout_20.setObjectName(u"verticalLayout_20")
-        self.label = QLabel(self.widget)
+        self.label = QLabel(self.history)
         self.label.setObjectName(u"label")
         self.label.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_20.addWidget(self.label)
 
-        self.stackedWidget.addWidget(self.widget)
+        self.stackedWidget.addWidget(self.history)
 
         self.verticalLayout_15.addWidget(self.stackedWidget)
 
@@ -1172,7 +1173,6 @@ class Ui_MainWindow(object):
         self.creditsLabel.setObjectName(u"creditsLabel")
         self.creditsLabel.setMaximumSize(QSize(16777215, 16))
         font5 = QFont()
-        font5.setFamily(u"Segoe UI")
         font5.setBold(False)
         font5.setItalic(False)
         self.creditsLabel.setFont(font5)
@@ -1211,7 +1211,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(1)
+        self.stackedWidget.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -1222,8 +1222,9 @@ class Ui_MainWindow(object):
         self.titleLeftApp.setText(QCoreApplication.translate("MainWindow", u"Nazvanie", None))
         self.titleLeftDescription.setText(QCoreApplication.translate("MainWindow", u"Brain Tumor detector", None))
         self.toggleButton.setText(QCoreApplication.translate("MainWindow", u"\u0421\u043a\u0440\u044b\u0442\u044c \u043c\u0435\u043d\u044e", None))
-        self.btn_detection.setText(QCoreApplication.translate("MainWindow", u"\u0421\u043a\u0430\u043d\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435", None))
         self.btn_about_cancer.setText(QCoreApplication.translate("MainWindow", u"\u0418\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044f", None))
+        self.btn_detection.setText(QCoreApplication.translate("MainWindow", u"\u0421\u043a\u0430\u043d\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435", None))
+        self.btn_history.setText(QCoreApplication.translate("MainWindow", u"\u0418\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044f", None))
         self.extraLabel.setText(QCoreApplication.translate("MainWindow", u"Left Box", None))
 #if QT_CONFIG(tooltip)
         self.extraCloseColumnBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Close left box", None))
@@ -1267,6 +1268,7 @@ class Ui_MainWindow(object):
         self.label_diagnosis.setText(QCoreApplication.translate("MainWindow", u"\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0441\u043d\u0438\u043c\u043e\u043a \u0438 \u043d\u0430\u0436\u043c\u0438\u0442\u0435 \u043d\u0430 \u043a\u043d\u043e\u043f\u043a\u0443", None))
         self.label_description.setText("")
         self.label_warning.setText("")
+        self.input_name.setText("")
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"\u041e\u043f\u0443\u0445\u043e\u043b\u044c \u043c\u043e\u0437\u0433\u0430", None))
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"\u041e\u0431\u0449\u0430\u044f \u0438\u043d\u0444\u043e\u0440\u043c\u0430\u0446\u0438\u044f", None))
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-size:12pt;\">\u041e\u043f\u0443\u0445\u043e\u043b\u044c \u043c\u043e\u0437\u0433\u0430 - \u044d\u0442\u043e \u043e\u0431\u0440\u0430\u0437\u043e\u0432\u0430\u043d\u0438\u0435 \u0438\u043b\u0438 \u0440\u043e\u0441\u0442 \u0430\u043d\u043e\u043c\u0430\u043b\u044c\u043d\u044b\u0445 \u043a\u043b\u0435\u0442\u043e\u043a \u0432 \u0432\u0430\u0448\u0435\u043c \u043c\u043e\u0437\u0433\u0435.</span></p><p><span style=\" font-size:12pt;\">\u0421\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u0435\u0442 \u043c\u043d\u043e\u0436\u0435\u0441\u0442\u0432\u043e \u0440\u0430\u0437\u043b\u0438\u0447\u043d\u044b\u0445 \u0442\u0438\u043f\u043e\u0432 \u043e\u043f\u0443\u0445\u043e\u043b\u0435\u0439 \u043c\u043e\u0437\u0433\u0430. \u041d\u0435\u043a\u043e\u0442\u043e\u0440\u044b\u0435 \u043e\u043f\u0443\u0445\u043e\u043b\u0438 \u043c\u043e\u0437\u0433\u0430 \u044f\u0432\u043b\u044f\u044e\u0442\u0441\u044f \u043d\u0435\u0440\u0430\u043a\u043e\u0432\u044b\u043c\u0438 (</span><span style=\" font-"
