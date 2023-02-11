@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainKezefP.ui'
+## Form generated from reading UI file 'maingLUCFA.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.0.2
 ##
@@ -1066,6 +1066,7 @@ class Ui_MainWindow(object):
         self.stat.setGeometry(QRect(570, 100, 581, 481))
         self.stat.setStyleSheet(u"font-size: 16px;\n"
 "")
+        self.stat.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
         self.stackedWidget.addWidget(self.history)
 
         self.verticalLayout_15.addWidget(self.stackedWidget)

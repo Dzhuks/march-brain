@@ -2028,6 +2028,9 @@ color: rgb(0, 255, 127)</string>
                        <property name="text">
                         <string/>
                        </property>
+                       <property name="alignment">
+                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+                       </property>
                       </widget>
                      </widget>
                     </widget>

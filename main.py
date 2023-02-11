@@ -32,6 +32,7 @@ os.environ["QT_FONT_DPI"] = "96"  # FIX Problem for High DPI and Scale above 100
 
 DESCRIPTIONS_FILE = "descriptions.txt"
 
+DIAGNOSIS = ['нет', 'менингиома', 'глиома', 'гипофиза']
 LABELS = ['Опухоль не обнаружена.', 'Обнаружена менингиома!', 'Обнаружена глиома!', 'Обнаружена аденома гипофиза!']
 
 
@@ -115,7 +116,9 @@ class MainWindow(QMainWindow):
         widgets.btn_detection.setStyleSheet(UIFunctions.selectMenu(widgets.btn_detection.styleSheet()))
 
         self.img_width = self.img_height = 400
-        self.set_image(r"images\images\default.png")
+        self.current_file = r"images\images\default.png"
+        self.set_image(self.current_file)
+        widgets.input_name.setText(self._get_filename())
 
     # BUTTONS CLICK
     # Post here your functions for clicked buttons
@@ -142,11 +145,14 @@ class MainWindow(QMainWindow):
             widgets.stackedWidget.setCurrentWidget(widgets.history)  # SET PAGE
             UIFunctions.resetStyle(self, btnName)  # RESET ANOTHERS BUTTONS SELECTED
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))  # SELECT MENU
+
             self.show_table()
+            self.show_stat()
 
         if btnName == "btn_load":
             self.open_image()
             widgets.label_diagnosis.clear()
+            widgets.input_name.setText(self._get_filename())
 
         if btnName == "btn_evaluate":
             # определение, есть ли опухоль в мозге
@@ -161,14 +167,18 @@ class MainWindow(QMainWindow):
                 color = "#51D581"
                 diagnosis_num = 0
 
-            diagnosis = LABELS[diagnosis_num]
+            diagnosis = DIAGNOSIS[diagnosis_num]
+            label_diagnosis = LABELS[diagnosis_num]
+            # добавление записи в базу данных
+            add_row(widgets.input_name.text(), diagnosis)
+
             # получение описания болезни из файла и корректное отображение символов перевода строки и табуляций
             description = get_descr_type(diagnosis_num).replace("\\n", "\n").replace("\\t", "\t")
 
             widgets.label_warning.setText(message)
             widgets.label_warning.setStyleSheet(f"font-size: 26px; color: {color}; font-weight: bold")
 
-            widgets.label_diagnosis.setText(diagnosis)
+            widgets.label_diagnosis.setText(label_diagnosis)
             widgets.label_description.setText(QCoreApplication.translate("MainWindow", u"{}".format(description), None))
 
         if btnName == "btn_save":
@@ -176,6 +186,10 @@ class MainWindow(QMainWindow):
 
         # PRINT BTN NAME
         print(f'Button "{btnName}" pressed!')
+
+    def _get_filename(self):
+        backslash = "\\"[0]
+        return self.current_file.split(backslash)[-1]
 
     def resizeEvent(self, event):
         # Update Size Grips
@@ -204,6 +218,18 @@ class MainWindow(QMainWindow):
             for j, elem in enumerate(row):
                 widgets.tableWidget.setItem(i, j, QTableWidgetItem(str(elem)))
         widgets.tableWidget.resizeColumnsToContents()
+
+    def show_stat(self):
+        diagnoses = {diagnosis: 0 for diagnosis in DIAGNOSIS}
+        for i in range(widgets.tableWidget.rowCount()):
+            if not widgets.tableWidget.item(i, 2):
+                break
+            diagnoses[widgets.tableWidget.item(i, 2).text()] += 1
+        stat = ""
+        for key, value in diagnoses.items():
+            stat += f"{key} - {value}\n"
+        widgets.stat.setText(stat)
+        widgets.stat.setStyleSheet(f"font-size: 26px; font-weight: bold")
 
     def set_image(self, filename):
         self.current_file = filename
