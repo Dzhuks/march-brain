@@ -26,6 +26,7 @@ from detect import detect
 from modules import *
 from widgets import *
 from PyQt6.QtCore import QCoreApplication
+from record import get_rows, FIELDNAMES, add_row
 
 os.environ["QT_FONT_DPI"] = "96"  # FIX Problem for High DPI and Scale above 100%
 
@@ -87,6 +88,9 @@ class MainWindow(QMainWindow):
         widgets.btn_load.clicked.connect(self.buttonClick)
         widgets.btn_evaluate.clicked.connect(self.buttonClick)
 
+        # SPINBOX CHANGES
+        widgets.spinBox.valueChanged.connect(self.show_table)
+
         self.stages = []
         # SHOW APP
         # ///////////////////////////////////////////////////////////////
@@ -138,6 +142,7 @@ class MainWindow(QMainWindow):
             widgets.stackedWidget.setCurrentWidget(widgets.history)  # SET PAGE
             UIFunctions.resetStyle(self, btnName)  # RESET ANOTHERS BUTTONS SELECTED
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))  # SELECT MENU
+            self.show_table()
 
         if btnName == "btn_load":
             self.open_image()
@@ -187,6 +192,18 @@ class MainWindow(QMainWindow):
             print('Mouse click: LEFT CLICK')
         if event.buttons() == Qt.RightButton:
             print('Mouse click: RIGHT CLICK')
+
+    def show_table(self):
+        num_rows, num_columns = widgets.spinBox.value(), len(FIELDNAMES)
+        data = get_rows(num_rows)
+        widgets.tableWidget.setRowCount(num_rows)
+        widgets.tableWidget.setColumnCount(num_columns)
+        widgets.tableWidget.setHorizontalHeaderLabels(FIELDNAMES)
+
+        for i, row in enumerate(data):
+            for j, elem in enumerate(row):
+                widgets.tableWidget.setItem(i, j, QTableWidgetItem(str(elem)))
+        widgets.tableWidget.resizeColumnsToContents()
 
     def set_image(self, filename):
         self.current_file = filename

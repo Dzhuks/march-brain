@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainKADiwy.ui'
+## Form generated from reading UI file 'mainKezefP.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.1.0
+## Created by: Qt User Interface Compiler version 6.0.2
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -12,7 +12,8 @@ from PySide6.QtCore import *
 from PySide6.QtGui import *
 from PySide6.QtWidgets import *
 
-from . resources_rc import *
+from modules import resources_rc
+
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
@@ -22,6 +23,7 @@ class Ui_MainWindow(object):
         self.styleSheet = QWidget(MainWindow)
         self.styleSheet.setObjectName(u"styleSheet")
         font = QFont()
+        font.setFamily(u"Segoe UI")
         font.setPointSize(10)
         font.setBold(False)
         font.setItalic(False)
@@ -577,6 +579,7 @@ class Ui_MainWindow(object):
         self.titleLeftApp.setObjectName(u"titleLeftApp")
         self.titleLeftApp.setGeometry(QRect(70, 8, 160, 20))
         font1 = QFont()
+        font1.setFamily(u"Segoe UI Semibold")
         font1.setPointSize(12)
         font1.setBold(False)
         font1.setItalic(False)
@@ -587,6 +590,7 @@ class Ui_MainWindow(object):
         self.titleLeftDescription.setGeometry(QRect(70, 27, 160, 16))
         self.titleLeftDescription.setMaximumSize(QSize(16777215, 16))
         font2 = QFont()
+        font2.setFamily(u"Segoe UI")
         font2.setPointSize(8)
         font2.setBold(False)
         font2.setItalic(False)
@@ -877,6 +881,7 @@ class Ui_MainWindow(object):
         self.maximizeRestoreAppBtn.setMinimumSize(QSize(28, 28))
         self.maximizeRestoreAppBtn.setMaximumSize(QSize(28, 28))
         font3 = QFont()
+        font3.setFamily(u"Segoe UI")
         font3.setPointSize(10)
         font3.setBold(False)
         font3.setItalic(False)
@@ -944,6 +949,7 @@ class Ui_MainWindow(object):
         self.btn_evaluate.setObjectName(u"btn_evaluate")
         self.btn_evaluate.setGeometry(QRect(220, 480, 191, 121))
         font4 = QFont()
+        font4.setFamily(u"Segoe UI")
         font4.setBold(True)
         font4.setItalic(False)
         self.btn_evaluate.setFont(font4)
@@ -1030,14 +1036,36 @@ class Ui_MainWindow(object):
         self.stackedWidget.addWidget(self.about_cancer)
         self.history = QWidget()
         self.history.setObjectName(u"history")
-        self.verticalLayout_20 = QVBoxLayout(self.history)
-        self.verticalLayout_20.setObjectName(u"verticalLayout_20")
-        self.label = QLabel(self.history)
-        self.label.setObjectName(u"label")
-        self.label.setAlignment(Qt.AlignCenter)
-
-        self.verticalLayout_20.addWidget(self.label)
-
+        self.title = QLabel(self.history)
+        self.title.setObjectName(u"title")
+        self.title.setGeometry(QRect(470, 0, 261, 41))
+        self.title.setStyleSheet(u"font-size: 30px;\n"
+"")
+        self.title.setAlignment(Qt.AlignCenter)
+        self.spinBox = QSpinBox(self.history)
+        self.spinBox.setObjectName(u"spinBox")
+        self.spinBox.setGeometry(QRect(240, 40, 51, 51))
+        self.spinBox.setMinimum(1)
+        self.spinBox.setValue(15)
+        self.label_column = QLabel(self.history)
+        self.label_column.setObjectName(u"label_column")
+        self.label_column.setGeometry(QRect(20, 40, 201, 51))
+        self.label_column.setStyleSheet(u"font-size: 24px;")
+        self.tableWidget = QTableWidget(self.history)
+        self.tableWidget.setObjectName(u"tableWidget")
+        self.tableWidget.setGeometry(QRect(20, 100, 511, 481))
+        self.tableWidget.setStyleSheet(u"font-size: 24px;\n"
+"")
+        self.label_stat = QLabel(self.history)
+        self.label_stat.setObjectName(u"label_stat")
+        self.label_stat.setGeometry(QRect(570, 50, 201, 51))
+        self.label_stat.setStyleSheet(u"font-size: 24px;\n"
+"color: rgb(0, 255, 127)")
+        self.stat = QLabel(self.history)
+        self.stat.setObjectName(u"stat")
+        self.stat.setGeometry(QRect(570, 100, 581, 481))
+        self.stat.setStyleSheet(u"font-size: 16px;\n"
+"")
         self.stackedWidget.addWidget(self.history)
 
         self.verticalLayout_15.addWidget(self.stackedWidget)
@@ -1141,6 +1169,7 @@ class Ui_MainWindow(object):
         self.creditsLabel.setObjectName(u"creditsLabel")
         self.creditsLabel.setMaximumSize(QSize(16777215, 16))
         font5 = QFont()
+        font5.setFamily(u"Segoe UI")
         font5.setBold(False)
         font5.setItalic(False)
         self.creditsLabel.setFont(font5)
@@ -1179,7 +1208,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(2)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -1254,7 +1283,11 @@ class Ui_MainWindow(object):
                         "-size:12pt;\">. \u041b\u044e\u0434\u0438, \u043a\u043e\u0442\u043e\u0440\u044b\u0435 \u043f\u043e\u0434\u0432\u0435\u0440\u0433\u043b\u0438\u0441\u044c \u0432\u043e\u0437\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u044e \u0432\u0438\u0434\u0430 \u0438\u0437\u043b\u0443\u0447\u0435\u043d\u0438\u044f, \u0438\u043c\u0435\u044e\u0442 \u043f\u043e\u0432\u044b\u0448\u0435\u043d\u043d\u044b\u0439 \u0440\u0438\u0441\u043a \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u044f \u043e\u043f\u0443\u0445\u043e\u043b\u0438 \u043c\u043e\u0437\u0433\u0430. \u0412\u043e\u0437\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435\u043c \u043c\u043e\u0436\u0435\u0442 \u0431\u044b\u0442\u044c \u043b\u0443\u0447\u0435\u0432\u0430\u044f \u0442\u0435\u0440\u0430\u043f\u0438\u044f, \u043f\u0440\u0438\u043c\u0435\u043d\u044f\u0435\u043c\u0430\u044f \u0434\u043b\u044f \u043b\u0435\u0447\u0435\u043d\u0438\u044f \u0440\u0430\u043a\u0430, \u0438 \u0440\u0430\u0434\u0438\u0430\u0446\u0438\u043e\u043d\u043d\u043e\u0435 \u043e\u0431\u043b\u0443\u0447\u0435"
                         "\u043d\u0438\u0435.</span></p><p><span style=\" font-size:12pt; font-weight:700;\">- \u0421\u0435\u043c\u0435\u0439\u043d\u0430\u044f \u0438\u0441\u0442\u043e\u0440\u0438\u044f \u0437\u0430\u0431\u043e\u043b\u0435\u0432\u0430\u043d\u0438\u0439</span><span style=\" font-size:12pt;\">. \u041d\u0435\u0431\u043e\u043b\u044c\u0448\u0430\u044f \u0447\u0430\u0441\u0442\u044c \u043e\u043f\u0443\u0445\u043e\u043b\u0435\u0439 \u043c\u043e\u0437\u0433\u0430 \u0432\u043e\u0437\u043d\u0438\u043a\u0430\u0435\u0442 \u0443 \u043b\u044e\u0434\u0435\u0439 \u0441 \u0441\u0435\u043c\u0435\u0439\u043d\u043e\u0439 \u0438\u0441\u0442\u043e\u0440\u0438\u0435\u0439 \u043e\u043f\u0443\u0445\u043e\u043b\u0435\u0439 \u043c\u043e\u0437\u0433\u0430 \u0438\u043b\u0438 \u0441\u0435\u043c\u0435\u0439\u043d\u043e\u0439 \u0438\u0441\u0442\u043e\u0440\u0438\u0435\u0439 \u0433\u0435\u043d\u0435\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0445 \u0441\u0438\u043d\u0434\u0440\u043e\u043c\u043e\u0432, \u043a\u043e\u0442\u043e\u0440\u044b\u0435 \u043f\u043e"
                         "\u0432\u044b\u0448\u0430\u044e\u0442 \u0440\u0438\u0441\u043a \u0440\u0430\u0437\u0432\u0438\u0442\u0438\u044f \u043e\u043f\u0443\u0445\u043e\u043b\u0435\u0439 \u043c\u043e\u0437\u0433\u0430.</span></p></body></html>", None))
-        self.label.setText(QCoreApplication.translate("MainWindow", u"NEW PAGE TEST", None))
+        self.title.setText(QCoreApplication.translate("MainWindow", u"\u0418\u0441\u0442\u043e\u0440\u0438\u044f \u0437\u0430\u0433\u0440\u0443\u0437\u043e\u043a", None))
+        self.spinBox.setSuffix("")
+        self.label_column.setText(QCoreApplication.translate("MainWindow", u"\u041a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u0441\u0442\u0440\u043e\u043a", None))
+        self.label_stat.setText(QCoreApplication.translate("MainWindow", u"\u0421\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043a\u0430", None))
+        self.stat.setText("")
         self.btn_message.setText(QCoreApplication.translate("MainWindow", u"Message", None))
         self.btn_print.setText(QCoreApplication.translate("MainWindow", u"Print", None))
         self.btn_logout.setText(QCoreApplication.translate("MainWindow", u"Logout", None))
