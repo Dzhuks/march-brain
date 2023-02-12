@@ -134,7 +134,7 @@ class MainWindow(QMainWindow):
         widgets.btn_detection.setStyleSheet(UIFunctions.selectMenu(widgets.btn_detection.styleSheet()))
 
         self.img_width = self.img_height = 400
-        self.current_file = r"images\images\default.png"
+        self.current_file = r"images/images/default.png"
         self.set_image(self.current_file)
         widgets.input_name.setText(self._get_filename())
         self.diagram_size = (521, 351)
@@ -173,6 +173,7 @@ class MainWindow(QMainWindow):
             self.open_image()
             widgets.label_diagnosis.clear()
             widgets.input_name.setText(self._get_filename())
+            print(self._get_filename())
 
         if btnName == "btn_evaluate":
             # определение, есть ли опухоль в мозге
@@ -213,14 +214,11 @@ class MainWindow(QMainWindow):
             widgets.stackedWidget_2.setCurrentWidget(self.pages[btnName])
             btn.setStyleSheet("font-size: 16px;color: #EEEEEE; border-radius: 15px; font-weight: bold; background-color: rgb(189, 147, 249)")
 
-
-
         # PRINT BTN NAME
         print(f'Button "{btnName}" pressed!')
 
     def _get_filename(self):
-        backslash = "\\"[0]
-        return self.current_file.split(backslash)[-1]
+        return self.current_file.split("/")[-1]
 
     def resizeEvent(self, event):
         # Update Size Grips
@@ -281,7 +279,6 @@ class MainWindow(QMainWindow):
         # pixmap = pixmap.scaled(self.diagram_size[0], self.diagram_size[1])
         widgets.label_diagram.setPixmap(pixmap)
         plt.figure().clear()
-
 
     def set_image(self, filename):
         self.current_file = filename

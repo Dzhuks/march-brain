@@ -30,6 +30,5 @@ def add_row(filename, diagnosis):
 def get_rows(number_rows=15):
     _create_db_if_not_exist()
     with open(DB_PATH, newline='', encoding="utf-8") as csvfile:
-        reader = csv.reader(csvfile.readlines()[:number_rows + 1], delimiter=";")
-        next(reader)  # skip headers
-        return reader
+        rows = [line.strip().split(';') for line in csvfile.readlines()[1:][-number_rows:]]
+        return rows
