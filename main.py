@@ -27,6 +27,7 @@ from modules import *
 from widgets import *
 from PyQt6.QtCore import QCoreApplication
 from record import get_rows, FIELDNAMES, add_row
+from matplotlib import pyplot as plt
 
 os.environ["QT_FONT_DPI"] = "96"  # FIX Problem for High DPI and Scale above 100%
 
@@ -107,6 +108,7 @@ class MainWindow(QMainWindow):
                         widgets.btn_page4]
 
         self.stages = []
+        widgets.btn_page1.setStyleSheet("font-size: 16px;color: #EEEEEE; border-radius: 15px; font-weight: bold; background-color: rgb(189, 147, 249)")
         # SHOW APP
         # ///////////////////////////////////////////////////////////////
         self.show()
@@ -135,6 +137,8 @@ class MainWindow(QMainWindow):
         self.current_file = r"images\images\default.png"
         self.set_image(self.current_file)
         widgets.input_name.setText(self._get_filename())
+        self.diagram_size = (521, 351)
+        self.diagram_path = "images/images/diagram.png"
 
     # BUTTONS CLICK
     # Post here your functions for clicked buttons
@@ -258,6 +262,24 @@ class MainWindow(QMainWindow):
         widgets.stat.setText(stat)
         widgets.stat.setStyleSheet(f"font-size: 26px; font-weight: bold")
 
+        self.show_diagram(diagnoses)
+
+    def show_diagram(self, diagnoses):
+        if not any(diagnoses.values()):
+            return
+        labels = DIAGNOSIS
+        colors = ["r", "y", "g", "b"]
+        print(diagnoses)
+
+        plt.pie(diagnoses.values(), labels=labels, colors=colors,
+                startangle=90, shadow=False, explode=(0, 0, 0.1, 0),
+                radius=1.2, autopct='%1.1f%%')
+        plt.legend()
+        plt.savefig(self.diagram_path)
+
+        pixmap = QPixmap(self.diagram_path)
+        # pixmap = pixmap.scaled(self.diagram_size[0], self.diagram_size[1])
+        widgets.label_diagram.setPixmap(pixmap)
 
     def set_image(self, filename):
         self.current_file = filename
