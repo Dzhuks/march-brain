@@ -183,7 +183,7 @@ class MainWindow(QMainWindow):
                 message = "Настоятельная просьба посетить врача-онколога!"
                 color = "#FF0032"
             else:
-                message = "Рекомендуем удостовериться в этом у врача-онколога."
+                message = "Рекомендуем ежегодно проходить скрининг."
                 color = "#51D581"
                 diagnosis_num = 0
 
@@ -280,6 +280,8 @@ class MainWindow(QMainWindow):
         pixmap = QPixmap(self.diagram_path)
         # pixmap = pixmap.scaled(self.diagram_size[0], self.diagram_size[1])
         widgets.label_diagram.setPixmap(pixmap)
+        plt.figure().clear()
+
 
     def set_image(self, filename):
         self.current_file = filename
