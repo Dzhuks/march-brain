@@ -32,7 +32,7 @@ os.environ["QT_FONT_DPI"] = "96"  # FIX Problem for High DPI and Scale above 100
 
 DESCRIPTIONS_FILE = "descriptions.txt"
 
-DIAGNOSIS = ['нет', 'менингиома', 'глиома', 'гипофиза']
+DIAGNOSIS = ['Не обнаружена', 'Менингиома', 'Глиома', 'Аденома гипофиза']
 LABELS = ['Опухоль не обнаружена.', 'Обнаружена менингиома!', 'Обнаружена глиома!', 'Обнаружена аденома гипофиза!']
 
 
@@ -92,10 +92,26 @@ class MainWindow(QMainWindow):
         # SPINBOX CHANGES
         widgets.spinBox.valueChanged.connect(self.show_table)
 
+        # ABOUT CANCER BUTTONS
+        widgets.btn_page1.clicked.connect(self.buttonClick)
+        widgets.btn_page2.clicked.connect(self.buttonClick)
+        widgets.btn_page3.clicked.connect(self.buttonClick)
+        widgets.btn_page4.clicked.connect(self.buttonClick)
+        self.pages = {"btn_page1": widgets.page,
+                      "btn_page2": widgets.page_2,
+                      "btn_page3": widgets.page_3,
+                      "btn_page4": widgets.page_4}
+        self.buttons = [widgets.btn_page1,
+                        widgets.btn_page2,
+                        widgets.btn_page3,
+                        widgets.btn_page4]
+
         self.stages = []
         # SHOW APP
         # ///////////////////////////////////////////////////////////////
         self.show()
+        self.show_stat()
+        self.show_table()
 
         # SET CUSTOM THEME
         # ///////////////////////////////////////////////////////////////
@@ -146,8 +162,8 @@ class MainWindow(QMainWindow):
             UIFunctions.resetStyle(self, btnName)  # RESET ANOTHERS BUTTONS SELECTED
             btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))  # SELECT MENU
 
-            self.show_table()
             self.show_stat()
+            self.show_table()
 
         if btnName == "btn_load":
             self.open_image()
@@ -171,6 +187,8 @@ class MainWindow(QMainWindow):
             label_diagnosis = LABELS[diagnosis_num]
             # добавление записи в базу данных
             add_row(widgets.input_name.text(), diagnosis)
+            self.show_stat()
+            self.show_table()
 
             # получение описания болезни из файла и корректное отображение символов перевода строки и табуляций
             description = get_descr_type(diagnosis_num).replace("\\n", "\n").replace("\\t", "\t")
@@ -183,6 +201,15 @@ class MainWindow(QMainWindow):
 
         if btnName == "btn_save":
             print("Save BTN clicked!")
+
+        if btnName in self.pages.keys():
+            print("true")
+            for button in self.buttons:
+                button.setStyleSheet("font-size: 16px;color: #EEEEEE; border-radius: 15px; font-weight: bold; background-color: rgb(40, 44, 52);")
+            widgets.stackedWidget_2.setCurrentWidget(self.pages[btnName])
+            btn.setStyleSheet("font-size: 16px;color: #EEEEEE; border-radius: 15px; font-weight: bold; background-color: rgb(189, 147, 249)")
+
+
 
         # PRINT BTN NAME
         print(f'Button "{btnName}" pressed!')
@@ -230,6 +257,7 @@ class MainWindow(QMainWindow):
             stat += f"{key} - {value}\n"
         widgets.stat.setText(stat)
         widgets.stat.setStyleSheet(f"font-size: 26px; font-weight: bold")
+
 
     def set_image(self, filename):
         self.current_file = filename
