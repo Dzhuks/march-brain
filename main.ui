@@ -8,7 +8,7 @@
     <x>0</x>
     <y>0</y>
     <width>1280</width>
-    <height>716</height>
+    <height>732</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -23,7 +23,6 @@
   <widget class="QWidget" name="styleSheet">
    <property name="font">
     <font>
-     <family>Segoe UI</family>
      <pointsize>10</pointsize>
      <italic>false</italic>
      <bold>false</bold>
@@ -541,7 +540,7 @@ Button */
     <item row="0" column="0">
      <widget class="QFrame" name="bgApp">
       <property name="styleSheet">
-       <string notr="true"/>
+       <string notr="true">background-color: rgb(40, 44, 52);</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::NoFrame</enum>
@@ -632,7 +631,6 @@ Button */
              </property>
              <property name="font">
               <font>
-               <family>Segoe UI Semibold</family>
                <pointsize>12</pointsize>
                <italic>false</italic>
                <bold>false</bold>
@@ -662,7 +660,6 @@ Button */
              </property>
              <property name="font">
               <font>
-               <family>Segoe UI</family>
                <pointsize>8</pointsize>
                <italic>false</italic>
                <bold>false</bold>
@@ -732,7 +729,6 @@ Button */
                 </property>
                 <property name="font">
                  <font>
-                  <family>Segoe UI</family>
                   <pointsize>10</pointsize>
                   <italic>false</italic>
                   <bold>false</bold>
@@ -774,7 +770,6 @@ Button */
                 </property>
                 <property name="font">
                  <font>
-                  <family>Segoe UI</family>
                   <pointsize>10</pointsize>
                   <italic>false</italic>
                   <bold>false</bold>
@@ -816,7 +811,6 @@ Button */
                 </property>
                 <property name="font">
                  <font>
-                  <family>Segoe UI</family>
                   <pointsize>10</pointsize>
                   <italic>false</italic>
                   <bold>false</bold>
@@ -1095,7 +1089,6 @@ Button */
                   </property>
                   <property name="font">
                    <font>
-                    <family>Segoe UI</family>
                     <pointsize>10</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -1131,7 +1124,6 @@ Button */
                   </property>
                   <property name="font">
                    <font>
-                    <family>Segoe UI</family>
                     <pointsize>10</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -1167,7 +1159,6 @@ Button */
                   </property>
                   <property name="font">
                    <font>
-                    <family>Segoe UI</family>
                     <pointsize>10</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -1319,6 +1310,13 @@ p, li { white-space: pre-wrap; }
                  <verstretch>0</verstretch>
                 </sizepolicy>
                </property>
+               <property name="font">
+                <font>
+                 <pointsize>10</pointsize>
+                 <italic>false</italic>
+                 <bold>false</bold>
+                </font>
+               </property>
                <property name="frameShape">
                 <enum>QFrame::NoFrame</enum>
                </property>
@@ -1357,7 +1355,6 @@ p, li { white-space: pre-wrap; }
                   </property>
                   <property name="font">
                    <font>
-                    <family>Segoe UI</family>
                     <pointsize>10</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -1455,7 +1452,6 @@ p, li { white-space: pre-wrap; }
                   </property>
                   <property name="font">
                    <font>
-                    <family>Segoe UI</family>
                     <pointsize>10</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -1601,8 +1597,15 @@ p, li { white-space: pre-wrap; }
                    </property>
                    <item>
                     <widget class="QStackedWidget" name="stackedWidget">
+                     <property name="font">
+                      <font>
+                       <pointsize>10</pointsize>
+                       <italic>false</italic>
+                       <bold>false</bold>
+                      </font>
+                     </property>
                      <property name="styleSheet">
-                      <string notr="true">background: transparent;</string>
+                      <string notr="true"/>
                      </property>
                      <property name="currentIndex">
                       <number>2</number>
@@ -1635,7 +1638,6 @@ p, li { white-space: pre-wrap; }
                        </property>
                        <property name="font">
                         <font>
-                         <family>Segoe UI</family>
                          <pointsize>-1</pointsize>
                          <italic>false</italic>
                          <bold>true</bold>
@@ -1677,7 +1679,6 @@ p, li { white-space: pre-wrap; }
                        </property>
                        <property name="font">
                         <font>
-                         <family>Segoe UI</family>
                          <pointsize>-1</pointsize>
                          <italic>false</italic>
                          <bold>true</bold>
@@ -1748,7 +1749,6 @@ p, li { white-space: pre-wrap; }
                        </property>
                        <property name="font">
                         <font>
-                         <family>Segoe UI</family>
                          <pointsize>10</pointsize>
                          <italic>false</italic>
                          <bold>false</bold>
@@ -1761,13 +1761,13 @@ p, li { white-space: pre-wrap; }
                      </widget>
                      <widget class="QWidget" name="about_cancer">
                       <property name="styleSheet">
-                       <string notr="true">b</string>
+                       <string notr="true">background-color: rgb(40, 44, 52);</string>
                       </property>
                       <widget class="QLabel" name="label_2">
                        <property name="geometry">
                         <rect>
-                         <x>450</x>
-                         <y>10</y>
+                         <x>10</x>
+                         <y>0</y>
                          <width>281</width>
                          <height>51</height>
                         </rect>
@@ -1781,69 +1781,16 @@ p, li { white-space: pre-wrap; }
                         <string>Опухоль мозга</string>
                        </property>
                        <property name="alignment">
-                        <set>Qt::AlignCenter</set>
-                       </property>
-                      </widget>
-                      <widget class="QLabel" name="label_3">
-                       <property name="geometry">
-                        <rect>
-                         <x>20</x>
-                         <y>60</y>
-                         <width>201</width>
-                         <height>51</height>
-                        </rect>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">font-size: 20px;
-color: rgb(255, 255, 0);</string>
-                       </property>
-                       <property name="text">
-                        <string>Общая информация</string>
-                       </property>
-                      </widget>
-                      <widget class="QLabel" name="label_4">
-                       <property name="geometry">
-                        <rect>
-                         <x>20</x>
-                         <y>100</y>
-                         <width>331</width>
-                         <height>491</height>
-                        </rect>
-                       </property>
-                       <property name="text">
-                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Опухоль мозга - это образование или рост аномальных клеток в вашем мозге.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Существует множество различных типов опухолей мозга. Некоторые опухоли мозга являются нераковыми (&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:700;&quot;&gt;доброкачественными&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;), а некоторые -раковыми (&lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:700;&quot;&gt;злокачественными&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;). Опухоли мозга могут зарождаться в мозге (первичные опухоли мозга), или рак может зародиться в других частях тела и распространиться на мозг в виде вторичных (метастатических) опухолей мозга.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Скорость роста опухоли мозга может сильно варьироваться. Скорость роста, а также расположение опухоли мозга определяют, как она повлияет на работу вашей нервной системы.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Варианты лечения опухолей мозга зависят от &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;типа опухоли мозга&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, а также от ее &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;размера&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; и &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-style:italic;&quot;&gt;расположения&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                       </property>
-                       <property name="textFormat">
-                        <enum>Qt::RichText</enum>
-                       </property>
-                       <property name="wordWrap">
-                        <bool>true</bool>
-                       </property>
-                      </widget>
-                      <widget class="QLabel" name="label_6">
-                       <property name="geometry">
-                        <rect>
-                         <x>380</x>
-                         <y>60</y>
-                         <width>201</width>
-                         <height>51</height>
-                        </rect>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">font-size: 20px;
-color: rgb(0, 255, 0)</string>
-                       </property>
-                       <property name="text">
-                        <string>Симптомы</string>
+                        <set>Qt::AlignHCenter|Qt::AlignTop</set>
                        </property>
                       </widget>
                       <widget class="Line" name="line">
                        <property name="geometry">
                         <rect>
-                         <x>360</x>
+                         <x>220</x>
                          <y>100</y>
                          <width>3</width>
-                         <height>450</height>
+                         <height>490</height>
                         </rect>
                        </property>
                        <property name="styleSheet">
@@ -1853,85 +1800,389 @@ color: rgb(0, 255, 0)</string>
                         <enum>Qt::Vertical</enum>
                        </property>
                       </widget>
-                      <widget class="QLabel" name="label_5">
+                      <widget class="QPushButton" name="btn_page1">
                        <property name="geometry">
                         <rect>
-                         <x>380</x>
-                         <y>100</y>
-                         <width>441</width>
-                         <height>471</height>
-                        </rect>
-                       </property>
-                       <property name="text">
-                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Признаки и симптомы опухоли мозга сильно варьируются и зависят от размера, расположения и скорости роста опухоли мозга. &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:700;&quot;&gt;Запишитесь на прием к врачу&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;, если у вас есть постоянные признаки и симптомы, которые вас беспокоят.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Общие признаки и симптомы, вызванные опухолями головного мозга, могут включать:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700;&quot;&gt;-&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; Головные боли, которые постепенно становятся более частыми и более сильными&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700;&quot;&gt;-&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; Необъяснимая тошнота или рвота&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700;&quot;&gt;-&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; Проблемы со зрением, такие как помутнение зрения, двоение в глазах или потеря периферического зрения&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700;&quot;&gt;- &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Постепенная потеря чувствительности или движения в руке или ноге&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700;&quot;&gt;-&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; Трудности с равновесием и речью&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700;&quot;&gt;-&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; Чувство сильной усталости&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700;&quot;&gt;-&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; Неспособность выполнять простые команды&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700;&quot;&gt;-&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; Судороги, особенно у тех, кто не страдает судорогами в прошлом&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; font-weight:700;&quot;&gt;-&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; Проблемы со слухом&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                       </property>
-                       <property name="textFormat">
-                        <enum>Qt::RichText</enum>
-                       </property>
-                       <property name="wordWrap">
-                        <bool>true</bool>
-                       </property>
-                      </widget>
-                      <widget class="Line" name="line_2">
-                       <property name="geometry">
-                        <rect>
-                         <x>820</x>
-                         <y>100</y>
-                         <width>3</width>
-                         <height>450</height>
-                        </rect>
-                       </property>
-                       <property name="styleSheet">
-                        <string notr="true">background-color: rgb(170, 0, 255)</string>
-                       </property>
-                       <property name="orientation">
-                        <enum>Qt::Vertical</enum>
-                       </property>
-                      </widget>
-                      <widget class="QLabel" name="label_7">
-                       <property name="geometry">
-                        <rect>
-                         <x>840</x>
-                         <y>50</y>
-                         <width>201</width>
+                         <x>0</x>
+                         <y>110</y>
+                         <width>211</width>
                          <height>51</height>
                         </rect>
                        </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>-1</pointsize>
+                         <italic>false</italic>
+                         <bold>true</bold>
+                        </font>
+                       </property>
                        <property name="styleSheet">
-                        <string notr="true">font-size: 20px;
-color: rgb(255, 85, 0)</string>
+                        <string notr="true">font-size: 16px;color: #EEEEEE; border-radius: 15px; font-weight: bold;</string>
+                       </property>
+                       <property name="text">
+                        <string>Общая информация</string>
+                       </property>
+                      </widget>
+                      <widget class="QPushButton" name="btn_page2">
+                       <property name="geometry">
+                        <rect>
+                         <x>0</x>
+                         <y>170</y>
+                         <width>211</width>
+                         <height>51</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>-1</pointsize>
+                         <italic>false</italic>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">font-size: 16px;color: #EEEEEE; border-radius: 15px; font-weight: bold;</string>
+                       </property>
+                       <property name="text">
+                        <string>Симптомы</string>
+                       </property>
+                      </widget>
+                      <widget class="QPushButton" name="btn_page3">
+                       <property name="geometry">
+                        <rect>
+                         <x>0</x>
+                         <y>230</y>
+                         <width>211</width>
+                         <height>51</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>-1</pointsize>
+                         <italic>false</italic>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">font-size: 16px;color: #EEEEEE; border-radius: 15px; font-weight: bold;</string>
+                       </property>
+                       <property name="text">
+                        <string>Лечение и профилактика</string>
+                       </property>
+                      </widget>
+                      <widget class="QPushButton" name="btn_page4">
+                       <property name="geometry">
+                        <rect>
+                         <x>0</x>
+                         <y>290</y>
+                         <width>211</width>
+                         <height>51</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>-1</pointsize>
+                         <italic>false</italic>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">font-size: 16px;color: #EEEEEE; border-radius: 15px; font-weight: bold;</string>
                        </property>
                        <property name="text">
                         <string>Группы риска</string>
                        </property>
                       </widget>
-                      <widget class="QLabel" name="label_8">
+                      <widget class="QStackedWidget" name="stackedWidget_2">
                        <property name="geometry">
                         <rect>
-                         <x>840</x>
-                         <y>100</y>
-                         <width>321</width>
-                         <height>391</height>
+                         <x>230</x>
+                         <y>20</y>
+                         <width>941</width>
+                         <height>591</height>
                         </rect>
                        </property>
-                       <property name="text">
-                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;У большинства людей с первичными опухолями мозга причина возникновения опухоли неясна, но есть факторы риска.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;К факторам риска относятся:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:700;&quot;&gt;- Воздействие радиации&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;. Люди, которые подверглись воздействию вида излучения, имеют повышенный риск развития опухоли мозга. Воздействием может быть лучевая терапия, применяемая для лечения рака, и радиационное облучение.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:700;&quot;&gt;- Семейная история заболеваний&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;. Небольшая часть опухолей мозга возникает у людей с семейной историей опухолей мозга или семейной историей генетических синдромов, которые повышают риск развития опухолей мозга.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                       <property name="styleSheet">
+                        <string notr="true">background-color: transparent;</string>
                        </property>
-                       <property name="textFormat">
-                        <enum>Qt::RichText</enum>
+                       <property name="currentIndex">
+                        <number>3</number>
                        </property>
-                       <property name="wordWrap">
-                        <bool>true</bool>
-                       </property>
+                       <widget class="QWidget" name="page">
+                        <widget class="QLabel" name="label">
+                         <property name="geometry">
+                          <rect>
+                           <x>190</x>
+                           <y>0</y>
+                           <width>481</width>
+                           <height>41</height>
+                          </rect>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">font-size: 25px;</string>
+                         </property>
+                         <property name="text">
+                          <string>Общая информация</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignHCenter|Qt::AlignTop</set>
+                         </property>
+                        </widget>
+                        <widget class="QScrollArea" name="scrollArea">
+                         <property name="geometry">
+                          <rect>
+                           <x>0</x>
+                           <y>40</y>
+                           <width>941</width>
+                           <height>551</height>
+                          </rect>
+                         </property>
+                         <property name="widgetResizable">
+                          <bool>true</bool>
+                         </property>
+                         <widget class="QWidget" name="scrollAreaWidgetContents">
+                          <property name="geometry">
+                           <rect>
+                            <x>0</x>
+                            <y>0</y>
+                            <width>939</width>
+                            <height>549</height>
+                           </rect>
+                          </property>
+                          <layout class="QVBoxLayout" name="verticalLayout">
+                           <item>
+                            <widget class="QLabel" name="label_6">
+                             <property name="text">
+                              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a name=&quot;docs-internal-guid-a91628e7-7fff-8216-f2aa-3f68672a8398&quot;/&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; font-weight:700; color:#eeeeee; background-color:transparent;&quot;&gt;О&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; font-weight:700; color:#eeeeee; background-color:transparent;&quot;&gt;пухоль мозга&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;&gt; - это образование или рост аномальных клеток в вашем мозге.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;&gt;Существует множество различных типов опухолей мозга. Некоторые опухоли мозга являются нераковыми (&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; font-weight:700; color:#eeeeee; background-color:transparent;&quot;&gt;доброкачественными&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;&gt;), а некоторые -раковыми (&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; font-weight:700; color:#eeeeee; background-color:transparent;&quot;&gt;злокачественными&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;&gt;).&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;&gt;Опухоли мозга могут зарождаться в мозге (первичные опухоли мозга), или рак может зародиться в других частях тела и распространиться на мозг в виде вторичных (метастатических) опухолей мозга.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;&gt;Скорость роста опухоли мозга может сильно варьироваться. Скорость роста, а также расположение опухоли мозга определяют, как она повлияет на работу вашей нервной системы.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                             </property>
+                             <property name="wordWrap">
+                              <bool>true</bool>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLabel" name="label_7">
+                             <property name="text">
+                              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;&gt;Варианты лечения опухолей мозга зависят от &lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; font-style:italic; color:#eeeeee; background-color:transparent;&quot;&gt;типа опухоли мозга&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;&gt;, а также от ее &lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; font-style:italic; color:#eeeeee; background-color:transparent;&quot;&gt;размера&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;&gt; и &lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; font-style:italic; color:#eeeeee; background-color:transparent;&quot;&gt;расположения&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;&gt;Классификация опухолей по степени развития болезни:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;&gt;- I степень — новообразования, не имеющие признаков злокачественности, которые растут медленно.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;&gt;- II степень — медленный рост, но новообразование уже начинает приобретать злокачественность, клетки становятся атипичными.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;&gt;- III степень — злокачественные образования, быстро растут.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;&gt;- IV степень — очень быстрый рост и агрессивность новообразования, прорастание в соседние отделы мозга, сжатие его частей.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                             </property>
+                             <property name="wordWrap">
+                              <bool>true</bool>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </widget>
+                       </widget>
+                       <widget class="QWidget" name="page_2">
+                        <widget class="QLabel" name="label_3">
+                         <property name="geometry">
+                          <rect>
+                           <x>190</x>
+                           <y>0</y>
+                           <width>481</width>
+                           <height>41</height>
+                          </rect>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">font-size: 25px;</string>
+                         </property>
+                         <property name="text">
+                          <string>Симптомы</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignHCenter|Qt::AlignTop</set>
+                         </property>
+                        </widget>
+                        <widget class="QScrollArea" name="scrollArea_2">
+                         <property name="geometry">
+                          <rect>
+                           <x>10</x>
+                           <y>40</y>
+                           <width>931</width>
+                           <height>551</height>
+                          </rect>
+                         </property>
+                         <property name="widgetResizable">
+                          <bool>true</bool>
+                         </property>
+                         <widget class="QWidget" name="scrollAreaWidgetContents_2">
+                          <property name="geometry">
+                           <rect>
+                            <x>0</x>
+                            <y>0</y>
+                            <width>929</width>
+                            <height>549</height>
+                           </rect>
+                          </property>
+                          <layout class="QVBoxLayout" name="verticalLayout_4">
+                           <item>
+                            <widget class="QLabel" name="label_9">
+                             <property name="text">
+                              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a name=&quot;docs-internal-guid-8bc89969-7fff-15b4-32ed-81a31a3dd331&quot;/&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;/&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;&gt;       Признаки и симптомы опухоли мозга сильно варьируются и зависят от размера, расположения и скорости роста опухоли мозга. &lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; font-weight:700; color:#eeeeee; background-color:transparent;&quot;&gt;Запишитесь на прием к врачу&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;&gt;, если у вас есть постоянные признаки и симптомы, которые вас беспокоят.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;&gt;        Общие признаки и симптомы, вызванные опухолями головного мозга, могут включать:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;/&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; font-weight:700; color:#eeeeee; background-color:transparent;&quot;&gt;-&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;&gt; Головные боли, которые постепенно становятся более частыми и более сильными&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;/&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; font-weight:700; color:#eeeeee; background-color:transparent;&quot;&gt;-&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;&gt; Необъяснимая тошнота или рвота&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;/&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; font-weight:700; color:#eeeeee; background-color:transparent;&quot;&gt;-&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;&gt; Проблемы со зрением, такие как помутнение зрения, двоение в глазах или потеря периферического зрения&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;/&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; font-weight:700; color:#eeeeee; background-color:transparent;&quot;&gt;- &lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;&gt;Постепенная потеря чувствительности или движения в руке или ноге&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;/&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; font-weight:700; color:#eeeeee; background-color:transparent;&quot;&gt;-&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;&gt; Трудности с равновесием и речью&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;/&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; font-weight:700; color:#eeeeee; background-color:transparent;&quot;&gt;-&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;&gt; Чувство сильной усталости&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;/&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; font-weight:700; color:#eeeeee; background-color:transparent;&quot;&gt;-&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;&gt; Неспособность выполнять простые команды&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;/&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; font-weight:700; color:#eeeeee; background-color:transparent;&quot;&gt;-&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;&gt; Судороги, особенно у тех, кто не страдает судорогами в прошлом&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;/&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; font-weight:700; color:#eeeeee; background-color:transparent;&quot;&gt;-&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;&gt; Проблемы со слухом&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                             </property>
+                             <property name="alignment">
+                              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+                             </property>
+                             <property name="wordWrap">
+                              <bool>true</bool>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </widget>
+                       </widget>
+                       <widget class="QWidget" name="page_3">
+                        <widget class="QLabel" name="label_4">
+                         <property name="geometry">
+                          <rect>
+                           <x>190</x>
+                           <y>0</y>
+                           <width>481</width>
+                           <height>41</height>
+                          </rect>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">font-size: 25px;</string>
+                         </property>
+                         <property name="text">
+                          <string>Лечение и профилактика</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignHCenter|Qt::AlignTop</set>
+                         </property>
+                        </widget>
+                        <widget class="QScrollArea" name="scrollArea_3">
+                         <property name="geometry">
+                          <rect>
+                           <x>0</x>
+                           <y>40</y>
+                           <width>941</width>
+                           <height>551</height>
+                          </rect>
+                         </property>
+                         <property name="widgetResizable">
+                          <bool>true</bool>
+                         </property>
+                         <widget class="QWidget" name="scrollAreaWidgetContents_3">
+                          <property name="geometry">
+                           <rect>
+                            <x>0</x>
+                            <y>0</y>
+                            <width>931</width>
+                            <height>674</height>
+                           </rect>
+                          </property>
+                          <layout class="QVBoxLayout" name="verticalLayout_8">
+                           <item>
+                            <widget class="QLabel" name="label_8">
+                             <property name="styleSheet">
+                              <string notr="true">margin-bottom: 30px;</string>
+                             </property>
+                             <property name="text">
+                              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a name=&quot;docs-internal-guid-58b891a1-7fff-3574-964c-449befa7400f&quot;/&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;/&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;&gt;       Лечение опухолей головного мозга, как и всех онкологических заболеваний, — комплексное и довольно дорогостоящее мероприятие. Все мероприятия, проводимые в ходе курса лечения, можно разбить на следующие группы:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;&gt;        - Симптоматическая терапия;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;&gt;        - Хирургическое лечение;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;&gt;        - Лучевая терапия;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;&gt;        - Радиохирургия;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;&gt;        - Химиотерапия;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;&gt;        - Криохирургия;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;&gt;        - Методы комбинированного лечения (лучевая и химиотерапия);&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                             </property>
+                             <property name="wordWrap">
+                              <bool>true</bool>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLabel" name="label_10">
+                             <property name="styleSheet">
+                              <string notr="true">margin-bottom: 30px;</string>
+                             </property>
+                             <property name="text">
+                              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a name=&quot;docs-internal-guid-4bd46297-7fff-e927-960e-baf51b1845fe&quot;/&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;/&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;&gt;       Часто именно лучевая терапия становится действенным методом лечения до операции и после нее, а иногда она является самостоятельным средством лечения, когда иссечение опухоли головного мозга невозможно. В этом случае врачам удается остановить рост новообразования.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                             </property>
+                             <property name="wordWrap">
+                              <bool>true</bool>
+                             </property>
+                            </widget>
+                           </item>
+                           <item>
+                            <widget class="QLabel" name="label_11">
+                             <property name="text">
+                              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a name=&quot;docs-internal-guid-d4a20399-7fff-5c6b-5cae-77c342244ff8&quot;/&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;/&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;&gt;       Чтобы предотвратить появление опухолей головного мозга, надо:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;&gt;        - достаточно спать и отдыхать;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;&gt;        - избегать чрезмерного употребления алкоголя;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;&gt;        - отдавать предпочтение натуральной пище и отказываться от копченостей;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;&gt;        - сократить использование мобильного телефона.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;&gt;        Заболевание чаще всего проявляется у людей 50-60 лет, поэтому советуем следить за здоровьем и не провоцировать рак в силу нездорового образа жизни.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                             </property>
+                             <property name="wordWrap">
+                              <bool>true</bool>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </widget>
+                       </widget>
+                       <widget class="QWidget" name="page_4">
+                        <widget class="QLabel" name="label_5">
+                         <property name="geometry">
+                          <rect>
+                           <x>190</x>
+                           <y>0</y>
+                           <width>481</width>
+                           <height>41</height>
+                          </rect>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">font-size: 25px;</string>
+                         </property>
+                         <property name="text">
+                          <string>Группы риска</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignHCenter|Qt::AlignTop</set>
+                         </property>
+                        </widget>
+                        <widget class="QScrollArea" name="scrollArea_4">
+                         <property name="geometry">
+                          <rect>
+                           <x>0</x>
+                           <y>40</y>
+                           <width>941</width>
+                           <height>551</height>
+                          </rect>
+                         </property>
+                         <property name="widgetResizable">
+                          <bool>true</bool>
+                         </property>
+                         <widget class="QWidget" name="scrollAreaWidgetContents_4">
+                          <property name="geometry">
+                           <rect>
+                            <x>0</x>
+                            <y>0</y>
+                            <width>939</width>
+                            <height>549</height>
+                           </rect>
+                          </property>
+                          <widget class="QLabel" name="label_12">
+                           <property name="geometry">
+                            <rect>
+                             <x>0</x>
+                             <y>0</y>
+                             <width>941</width>
+                             <height>501</height>
+                            </rect>
+                           </property>
+                           <property name="text">
+                            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a name=&quot;docs-internal-guid-7c4aa128-7fff-939e-45c3-92de81bcf48f&quot;/&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;/&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;&gt;       К сожалению, до сих пор неизвестны причины возникновения опухолей мозга, но есть факторы риска, которые могут повысить вероятность появления данной болезни.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;&gt;        К факторам риска относятся:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;/&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; font-weight:700; color:#eeeeee; background-color:transparent;&quot;&gt;- Воздействие радиации&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;&gt;. Люди, которые подверглись воздействию вида излучения, имеют повышенный риск развития опухоли мозга. Воздействием может быть лучевая терапия, применяемая для лечения рака, и радиационное облучение.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;/&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; font-weight:700; color:#eeeeee; background-color:transparent;&quot;&gt;- Семейная история заболеваний&lt;/span&gt;&lt;span style=&quot; font-family:'Arial'; font-size:14pt; color:#eeeeee; background-color:transparent;&quot;&gt;. Небольшая часть опухолей мозга возникает у людей с семейной историей опухолей мозга или семейной историей генетических синдромов, которые повышают риск развития опухолей мозга.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                           </property>
+                           <property name="wordWrap">
+                            <bool>true</bool>
+                           </property>
+                          </widget>
+                         </widget>
+                        </widget>
+                       </widget>
                       </widget>
                      </widget>
                      <widget class="QWidget" name="history">
                       <widget class="QLabel" name="title">
                        <property name="geometry">
                         <rect>
-                         <x>470</x>
-                         <y>0</y>
-                         <width>261</width>
+                         <x>560</x>
+                         <y>10</y>
+                         <width>251</width>
                          <height>41</height>
                         </rect>
                        </property>
@@ -1951,9 +2202,12 @@ color: rgb(255, 85, 0)</string>
                         <rect>
                          <x>240</x>
                          <y>40</y>
-                         <width>51</width>
-                         <height>51</height>
+                         <width>81</width>
+                         <height>41</height>
                         </rect>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">background-color: rgb(40, 44, 52); font-size: 16px;</string>
                        </property>
                        <property name="suffix">
                         <string/>
@@ -1970,7 +2224,7 @@ color: rgb(255, 85, 0)</string>
                         <rect>
                          <x>20</x>
                          <y>40</y>
-                         <width>201</width>
+                         <width>211</width>
                          <height>51</height>
                         </rect>
                        </property>
@@ -2018,8 +2272,15 @@ color: rgb(0, 255, 127)</string>
                          <x>570</x>
                          <y>100</y>
                          <width>581</width>
-                         <height>481</height>
+                         <height>131</height>
                         </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>-1</pointsize>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
                        </property>
                        <property name="styleSheet">
                         <string notr="true">font-size: 16px;
@@ -2030,6 +2291,26 @@ color: rgb(0, 255, 127)</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="label_diagram">
+                       <property name="geometry">
+                        <rect>
+                         <x>560</x>
+                         <y>240</y>
+                         <width>521</width>
+                         <height>351</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>10</pointsize>
+                         <italic>false</italic>
+                         <bold>false</bold>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string/>
                        </property>
                       </widget>
                      </widget>
@@ -2154,7 +2435,6 @@ color: rgb(0, 255, 127)</string>
                            </property>
                            <property name="font">
                             <font>
-                             <family>Segoe UI</family>
                              <pointsize>10</pointsize>
                              <italic>false</italic>
                              <bold>false</bold>
@@ -2190,7 +2470,6 @@ color: rgb(0, 255, 127)</string>
                            </property>
                            <property name="font">
                             <font>
-                             <family>Segoe UI</family>
                              <pointsize>10</pointsize>
                              <italic>false</italic>
                              <bold>false</bold>
@@ -2226,7 +2505,6 @@ color: rgb(0, 255, 127)</string>
                            </property>
                            <property name="font">
                             <font>
-                             <family>Segoe UI</family>
                              <pointsize>10</pointsize>
                              <italic>false</italic>
                              <bold>false</bold>
@@ -2304,7 +2582,6 @@ color: rgb(0, 255, 127)</string>
                   </property>
                   <property name="font">
                    <font>
-                    <family>Segoe UI</family>
                     <pointsize>-1</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
