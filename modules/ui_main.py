@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainVHxIoQ.ui'
+## Form generated from reading UI file 'mainGwPyFS.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.1.0
 ##
@@ -12,7 +12,7 @@ from PySide6.QtCore import *
 from PySide6.QtGui import *
 from PySide6.QtWidgets import *
 
-from .resources_rc import *
+from . resources_rc import *
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -990,8 +990,8 @@ class Ui_MainWindow(object):
         self.label_2.setAlignment(Qt.AlignHCenter|Qt.AlignTop)
         self.line = QFrame(self.about_cancer)
         self.line.setObjectName(u"line")
-        self.line.setGeometry(QRect(220, 100, 3, 490))
-        self.line.setStyleSheet(u"background-color: rgb(170, 0, 255)")
+        self.line.setGeometry(QRect(220, 60, 3, 550))
+        self.line.setStyleSheet(u"background-color: rgb(189, 147, 249)")
         self.line.setFrameShape(QFrame.VLine)
         self.line.setFrameShadow(QFrame.Sunken)
         self.btn_page1 = QPushButton(self.about_cancer)
@@ -1136,33 +1136,33 @@ class Ui_MainWindow(object):
         self.history.setObjectName(u"history")
         self.title = QLabel(self.history)
         self.title.setObjectName(u"title")
-        self.title.setGeometry(QRect(560, 10, 251, 41))
+        self.title.setGeometry(QRect(10, -10, 251, 41))
         self.title.setStyleSheet(u"font-size: 30px;\n"
 "")
         self.title.setAlignment(Qt.AlignCenter)
         self.spinBox = QSpinBox(self.history)
         self.spinBox.setObjectName(u"spinBox")
-        self.spinBox.setGeometry(QRect(240, 40, 81, 41))
+        self.spinBox.setGeometry(QRect(240, 70, 81, 41))
         self.spinBox.setStyleSheet(u"background-color: rgb(40, 44, 52); font-size: 16px;")
         self.spinBox.setMinimum(1)
         self.spinBox.setValue(15)
         self.label_column = QLabel(self.history)
         self.label_column.setObjectName(u"label_column")
-        self.label_column.setGeometry(QRect(20, 40, 211, 51))
+        self.label_column.setGeometry(QRect(20, 70, 211, 51))
         self.label_column.setStyleSheet(u"font-size: 24px;")
         self.tableWidget = QTableWidget(self.history)
         self.tableWidget.setObjectName(u"tableWidget")
-        self.tableWidget.setGeometry(QRect(20, 100, 511, 481))
-        self.tableWidget.setStyleSheet(u"font-size: 24px;\n"
+        self.tableWidget.setGeometry(QRect(10, 130, 511, 481))
+        self.tableWidget.setStyleSheet(u"font-size: 19px;\n"
 "")
         self.label_stat = QLabel(self.history)
         self.label_stat.setObjectName(u"label_stat")
-        self.label_stat.setGeometry(QRect(570, 50, 201, 51))
+        self.label_stat.setGeometry(QRect(560, 0, 201, 51))
         self.label_stat.setStyleSheet(u"font-size: 24px;\n"
 "color: rgb(0, 255, 127)")
         self.stat = QLabel(self.history)
         self.stat.setObjectName(u"stat")
-        self.stat.setGeometry(QRect(570, 100, 581, 131))
+        self.stat.setGeometry(QRect(560, 60, 581, 141))
         font5 = QFont()
         font5.setBold(False)
         font5.setItalic(False)
@@ -1172,8 +1172,20 @@ class Ui_MainWindow(object):
         self.stat.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
         self.label_diagram = QLabel(self.history)
         self.label_diagram.setObjectName(u"label_diagram")
-        self.label_diagram.setGeometry(QRect(560, 240, 521, 351))
+        self.label_diagram.setGeometry(QRect(540, 220, 631, 391))
         self.label_diagram.setFont(font)
+        self.line_2 = QFrame(self.history)
+        self.line_2.setObjectName(u"line_2")
+        self.line_2.setGeometry(QRect(530, -10, 3, 636))
+        self.line_2.setStyleSheet(u"background-color: rgb(189, 147, 249)")
+        self.line_2.setFrameShape(QFrame.VLine)
+        self.line_2.setFrameShadow(QFrame.Sunken)
+        self.line_3 = QFrame(self.history)
+        self.line_3.setObjectName(u"line_3")
+        self.line_3.setGeometry(QRect(533, 210, 655, 3))
+        self.line_3.setStyleSheet(u"background-color: rgb(189, 147, 249)")
+        self.line_3.setFrameShape(QFrame.HLine)
+        self.line_3.setFrameShadow(QFrame.Sunken)
         self.stackedWidget.addWidget(self.history)
 
         self.verticalLayout_15.addWidget(self.stackedWidget)
@@ -1313,7 +1325,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.stackedWidget.setCurrentIndex(2)
-        self.stackedWidget_2.setCurrentIndex(3)
+        self.stackedWidget_2.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
