@@ -92,6 +92,7 @@ class MainWindow(QMainWindow):
 
         # SPINBOX CHANGES
         widgets.spinBox.valueChanged.connect(self.show_table)
+        widgets.spinBox.valueChanged.connect(self.show_stat)
 
         # ABOUT CANCER BUTTONS
         widgets.btn_page1.clicked.connect(self.buttonClick)
@@ -118,7 +119,7 @@ class MainWindow(QMainWindow):
         # SET CUSTOM THEME
         # ///////////////////////////////////////////////////////////////
         useCustomTheme = False
-        themeFile = r"themes\py_dracula_light.qss"
+        themeFile = r"themes/py_dracula_light.qss"
 
         # SET THEME AND HACKS
         if useCustomTheme:
@@ -267,7 +268,6 @@ class MainWindow(QMainWindow):
             return
         labels = DIAGNOSIS
         colors = ["r", "y", "g", "b"]
-        print(diagnoses)
 
         plt.pie(diagnoses.values(), labels=labels, colors=colors,
                 startangle=90, shadow=False, explode=(0, 0, 0.1, 0),
