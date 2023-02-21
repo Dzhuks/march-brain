@@ -50,7 +50,7 @@ class MainWindow(QMainWindow):
         # APP NAME
         # ///////////////////////////////////////////////////////////////
         title = "MBrain"
-        description = "Kakoi to text"
+        description = "Tumobrainor"
         # APPLY TEXTS
         self.setWindowTitle(title)
         widgets.titleRightInfo.setText(description)

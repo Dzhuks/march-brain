@@ -23,6 +23,7 @@
   <widget class="QWidget" name="styleSheet">
    <property name="font">
     <font>
+     <family>Segoe UI</family>
      <pointsize>10</pointsize>
      <italic>false</italic>
      <bold>false</bold>
@@ -631,6 +632,7 @@ Button */
              </property>
              <property name="font">
               <font>
+               <family>Segoe UI Semibold</family>
                <pointsize>12</pointsize>
                <italic>false</italic>
                <bold>false</bold>
@@ -660,6 +662,7 @@ Button */
              </property>
              <property name="font">
               <font>
+               <family>Segoe UI</family>
                <pointsize>8</pointsize>
                <italic>false</italic>
                <bold>false</bold>
@@ -729,6 +732,7 @@ Button */
                 </property>
                 <property name="font">
                  <font>
+                  <family>Segoe UI</family>
                   <pointsize>10</pointsize>
                   <italic>false</italic>
                   <bold>false</bold>
@@ -770,6 +774,7 @@ Button */
                 </property>
                 <property name="font">
                  <font>
+                  <family>Segoe UI</family>
                   <pointsize>10</pointsize>
                   <italic>false</italic>
                   <bold>false</bold>
@@ -811,6 +816,7 @@ Button */
                 </property>
                 <property name="font">
                  <font>
+                  <family>Segoe UI</family>
                   <pointsize>10</pointsize>
                   <italic>false</italic>
                   <bold>false</bold>
@@ -1089,6 +1095,7 @@ Button */
                   </property>
                   <property name="font">
                    <font>
+                    <family>Segoe UI</family>
                     <pointsize>10</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -1124,6 +1131,7 @@ Button */
                   </property>
                   <property name="font">
                    <font>
+                    <family>Segoe UI</family>
                     <pointsize>10</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -1159,6 +1167,7 @@ Button */
                   </property>
                   <property name="font">
                    <font>
+                    <family>Segoe UI</family>
                     <pointsize>10</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -1312,6 +1321,7 @@ p, li { white-space: pre-wrap; }
                </property>
                <property name="font">
                 <font>
+                 <family>Segoe UI</family>
                  <pointsize>10</pointsize>
                  <italic>false</italic>
                  <bold>false</bold>
@@ -1355,6 +1365,7 @@ p, li { white-space: pre-wrap; }
                   </property>
                   <property name="font">
                    <font>
+                    <family>Segoe UI</family>
                     <pointsize>10</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -1452,6 +1463,7 @@ p, li { white-space: pre-wrap; }
                   </property>
                   <property name="font">
                    <font>
+                    <family>Segoe UI</family>
                     <pointsize>10</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>
@@ -1599,6 +1611,7 @@ p, li { white-space: pre-wrap; }
                     <widget class="QStackedWidget" name="stackedWidget">
                      <property name="font">
                       <font>
+                       <family>Segoe UI</family>
                        <pointsize>10</pointsize>
                        <italic>false</italic>
                        <bold>false</bold>
@@ -1608,7 +1621,7 @@ p, li { white-space: pre-wrap; }
                       <string notr="true"/>
                      </property>
                      <property name="currentIndex">
-                      <number>2</number>
+                      <number>0</number>
                      </property>
                      <widget class="QWidget" name="detection">
                       <property name="styleSheet">
@@ -1638,6 +1651,7 @@ p, li { white-space: pre-wrap; }
                        </property>
                        <property name="font">
                         <font>
+                         <family>Segoe UI</family>
                          <pointsize>-1</pointsize>
                          <italic>false</italic>
                          <bold>true</bold>
@@ -1647,8 +1661,8 @@ p, li { white-space: pre-wrap; }
                         <string notr="true">border-radius: 25px; background-image: url(:/images/images/images/detect_btn.png); font-size: 19px; font-weight: bold; background-color: #DBA03A;</string>
                        </property>
                        <property name="text">
-                        <string>Обнаружить
-опухоль</string>
+                        <string>Проверить
+снимок </string>
                        </property>
                       </widget>
                       <widget class="QPushButton" name="btn_load">
@@ -1679,6 +1693,7 @@ p, li { white-space: pre-wrap; }
                        </property>
                        <property name="font">
                         <font>
+                         <family>Segoe UI</family>
                          <pointsize>-1</pointsize>
                          <italic>false</italic>
                          <bold>true</bold>
@@ -1749,6 +1764,7 @@ p, li { white-space: pre-wrap; }
                        </property>
                        <property name="font">
                         <font>
+                         <family>Segoe UI</family>
                          <pointsize>10</pointsize>
                          <italic>false</italic>
                          <bold>false</bold>
@@ -1811,6 +1827,7 @@ p, li { white-space: pre-wrap; }
                        </property>
                        <property name="font">
                         <font>
+                         <family>Segoe UI</family>
                          <pointsize>-1</pointsize>
                          <italic>false</italic>
                          <bold>true</bold>
@@ -1834,6 +1851,7 @@ p, li { white-space: pre-wrap; }
                        </property>
                        <property name="font">
                         <font>
+                         <family>Segoe UI</family>
                          <pointsize>-1</pointsize>
                          <italic>false</italic>
                          <bold>true</bold>
@@ -1857,6 +1875,7 @@ p, li { white-space: pre-wrap; }
                        </property>
                        <property name="font">
                         <font>
+                         <family>Segoe UI</family>
                          <pointsize>-1</pointsize>
                          <italic>false</italic>
                          <bold>true</bold>
@@ -1880,6 +1899,7 @@ p, li { white-space: pre-wrap; }
                        </property>
                        <property name="font">
                         <font>
+                         <family>Segoe UI</family>
                          <pointsize>-1</pointsize>
                          <italic>false</italic>
                          <bold>true</bold>
@@ -2277,6 +2297,7 @@ color: rgb(0, 255, 127)</string>
                        </property>
                        <property name="font">
                         <font>
+                         <family>Segoe UI</family>
                          <pointsize>-1</pointsize>
                          <italic>false</italic>
                          <bold>false</bold>
@@ -2304,6 +2325,7 @@ color: rgb(0, 255, 127)</string>
                        </property>
                        <property name="font">
                         <font>
+                         <family>Segoe UI</family>
                          <pointsize>10</pointsize>
                          <italic>false</italic>
                          <bold>false</bold>
@@ -2467,6 +2489,7 @@ color: rgb(0, 255, 127)</string>
                            </property>
                            <property name="font">
                             <font>
+                             <family>Segoe UI</family>
                              <pointsize>10</pointsize>
                              <italic>false</italic>
                              <bold>false</bold>
@@ -2502,6 +2525,7 @@ color: rgb(0, 255, 127)</string>
                            </property>
                            <property name="font">
                             <font>
+                             <family>Segoe UI</family>
                              <pointsize>10</pointsize>
                              <italic>false</italic>
                              <bold>false</bold>
@@ -2537,6 +2561,7 @@ color: rgb(0, 255, 127)</string>
                            </property>
                            <property name="font">
                             <font>
+                             <family>Segoe UI</family>
                              <pointsize>10</pointsize>
                              <italic>false</italic>
                              <bold>false</bold>
@@ -2614,6 +2639,7 @@ color: rgb(0, 255, 127)</string>
                   </property>
                   <property name="font">
                    <font>
+                    <family>Segoe UI</family>
                     <pointsize>-1</pointsize>
                     <italic>false</italic>
                     <bold>false</bold>

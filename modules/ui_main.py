@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainGwPyFS.ui'
+## Form generated from reading UI file 'mainNfblfK.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.1.0
+## Created by: Qt User Interface Compiler version 6.0.2
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -12,7 +12,7 @@ from PySide6.QtCore import *
 from PySide6.QtGui import *
 from PySide6.QtWidgets import *
 
-from . resources_rc import *
+from modules import resources_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -23,6 +23,7 @@ class Ui_MainWindow(object):
         self.styleSheet = QWidget(MainWindow)
         self.styleSheet.setObjectName(u"styleSheet")
         font = QFont()
+        font.setFamily(u"Segoe UI")
         font.setPointSize(10)
         font.setBold(False)
         font.setItalic(False)
@@ -578,6 +579,7 @@ class Ui_MainWindow(object):
         self.titleLeftApp.setObjectName(u"titleLeftApp")
         self.titleLeftApp.setGeometry(QRect(70, 8, 160, 20))
         font1 = QFont()
+        font1.setFamily(u"Segoe UI Semibold")
         font1.setPointSize(12)
         font1.setBold(False)
         font1.setItalic(False)
@@ -588,6 +590,7 @@ class Ui_MainWindow(object):
         self.titleLeftDescription.setGeometry(QRect(70, 27, 160, 16))
         self.titleLeftDescription.setMaximumSize(QSize(16777215, 16))
         font2 = QFont()
+        font2.setFamily(u"Segoe UI")
         font2.setPointSize(8)
         font2.setBold(False)
         font2.setItalic(False)
@@ -879,6 +882,7 @@ class Ui_MainWindow(object):
         self.maximizeRestoreAppBtn.setMinimumSize(QSize(28, 28))
         self.maximizeRestoreAppBtn.setMaximumSize(QSize(28, 28))
         font3 = QFont()
+        font3.setFamily(u"Segoe UI")
         font3.setPointSize(10)
         font3.setBold(False)
         font3.setItalic(False)
@@ -947,6 +951,7 @@ class Ui_MainWindow(object):
         self.btn_evaluate.setObjectName(u"btn_evaluate")
         self.btn_evaluate.setGeometry(QRect(220, 480, 191, 121))
         font4 = QFont()
+        font4.setFamily(u"Segoe UI")
         font4.setBold(True)
         font4.setItalic(False)
         self.btn_evaluate.setFont(font4)
@@ -1164,6 +1169,7 @@ class Ui_MainWindow(object):
         self.stat.setObjectName(u"stat")
         self.stat.setGeometry(QRect(560, 60, 581, 141))
         font5 = QFont()
+        font5.setFamily(u"Segoe UI")
         font5.setBold(False)
         font5.setItalic(False)
         self.stat.setFont(font5)
@@ -1324,7 +1330,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(2)
+        self.stackedWidget.setCurrentIndex(0)
         self.stackedWidget_2.setCurrentIndex(0)
 
 
@@ -1374,8 +1380,8 @@ class Ui_MainWindow(object):
 #endif // QT_CONFIG(tooltip)
         self.closeAppBtn.setText("")
         self.img_brain.setText("")
-        self.btn_evaluate.setText(QCoreApplication.translate("MainWindow", u"\u041e\u0431\u043d\u0430\u0440\u0443\u0436\u0438\u0442\u044c\n"
-"\u043e\u043f\u0443\u0445\u043e\u043b\u044c", None))
+        self.btn_evaluate.setText(QCoreApplication.translate("MainWindow", u"\u041f\u0440\u043e\u0432\u0435\u0440\u0438\u0442\u044c\n"
+"\u0441\u043d\u0438\u043c\u043e\u043a ", None))
         self.btn_load.setText(QCoreApplication.translate("MainWindow", u"\u0417\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u044c\n"
 "\u0441\u043d\u0438\u043c\u043e\u043a \u041c\u0420\u0422", None))
         self.label_diagnosis.setText(QCoreApplication.translate("MainWindow", u"\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0441\u043d\u0438\u043c\u043e\u043a \u0438 \u043d\u0430\u0436\u043c\u0438\u0442\u0435 \u043d\u0430 \u043a\u043d\u043e\u043f\u043a\u0443", None))
