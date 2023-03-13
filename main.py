@@ -228,7 +228,7 @@ class MainWindow(QMainWindow):
         widgets.tableWidget.setColumnCount(num_columns)
         widgets.tableWidget.setHorizontalHeaderLabels(FIELDNAMES)
 
-        for i, row in enumerate(data):
+        for i, row in enumerate(data[::-1]):
             for j, elem in enumerate(row):
                 widgets.tableWidget.setItem(i, j, QTableWidgetItem(str(elem)))
         widgets.tableWidget.resizeColumnsToContents()

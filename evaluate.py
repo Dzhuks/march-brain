@@ -6,7 +6,7 @@ from PIL import Image
 from torchvision import transforms, models
 
 device_name = "cuda:0:" if torch.cuda.is_available() else "cpu"
-device = torch.device(device_name)
+device = torch.device("cpu")
 transform = transforms.Compose([transforms.Resize((512, 512)), transforms.ToTensor()])
 
 resnet_model = models.resnet50(pretrained=True)
